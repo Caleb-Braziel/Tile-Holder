@@ -1,7 +1,9 @@
-[gd_scene load_steps=3 format=3 uid="uid://yebyh6hle2y"]
+[gd_scene load_steps=5 format=3 uid="uid://yebyh6hle2y"]
 
 [ext_resource type="Script" uid="uid://dyedrjv0shy4f" path="res://item_slot.gd" id="1_r4hhf"]
 [ext_resource type="Texture2D" uid="uid://3jgoi3pih1fs" path="res://letter_A.png" id="1_t41hn"]
+[ext_resource type="Texture2D" uid="uid://bvx81a2eo0gum" path="res://letter_B.png" id="3_n5r5g"]
+[ext_resource type="Texture2D" uid="uid://pt5n78w8ute" path="res://letter_C.png" id="4_s4dlt"]
 
 [node name="TileInventory" type="Node3D"]
 
@@ -33,6 +35,7 @@ theme_override_constants/margin_bottom = 5
 layout_mode = 2
 theme_override_constants/h_separation = 5
 theme_override_constants/v_separation = 5
+columns = 7
 
 [node name="ItemSlot" type="Panel" parent="Inventory/MarginContainer/GridContainer"]
 custom_minimum_size = Vector2(50, 50)
@@ -40,6 +43,102 @@ layout_mode = 2
 script = ExtResource("1_r4hhf")
 
 [node name="TextureRect" type="TextureRect" parent="Inventory/MarginContainer/GridContainer/ItemSlot"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_t41hn")
+expand_mode = 3
+stretch_mode = 4
+
+[node name="ItemSlot2" type="Panel" parent="Inventory/MarginContainer/GridContainer"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+script = ExtResource("1_r4hhf")
+
+[node name="TextureRect" type="TextureRect" parent="Inventory/MarginContainer/GridContainer/ItemSlot2"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_n5r5g")
+expand_mode = 3
+stretch_mode = 4
+
+[node name="ItemSlot3" type="Panel" parent="Inventory/MarginContainer/GridContainer"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+script = ExtResource("1_r4hhf")
+
+[node name="TextureRect" type="TextureRect" parent="Inventory/MarginContainer/GridContainer/ItemSlot3"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("4_s4dlt")
+expand_mode = 3
+stretch_mode = 4
+
+[node name="ItemSlot4" type="Panel" parent="Inventory/MarginContainer/GridContainer"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+script = ExtResource("1_r4hhf")
+
+[node name="TextureRect" type="TextureRect" parent="Inventory/MarginContainer/GridContainer/ItemSlot4"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_t41hn")
+expand_mode = 3
+stretch_mode = 4
+
+[node name="ItemSlot5" type="Panel" parent="Inventory/MarginContainer/GridContainer"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+script = ExtResource("1_r4hhf")
+
+[node name="TextureRect" type="TextureRect" parent="Inventory/MarginContainer/GridContainer/ItemSlot5"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_n5r5g")
+expand_mode = 3
+stretch_mode = 4
+
+[node name="ItemSlot6" type="Panel" parent="Inventory/MarginContainer/GridContainer"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+script = ExtResource("1_r4hhf")
+
+[node name="TextureRect" type="TextureRect" parent="Inventory/MarginContainer/GridContainer/ItemSlot6"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("4_s4dlt")
+expand_mode = 3
+stretch_mode = 4
+
+[node name="ItemSlot7" type="Panel" parent="Inventory/MarginContainer/GridContainer"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+script = ExtResource("1_r4hhf")
+
+[node name="TextureRect" type="TextureRect" parent="Inventory/MarginContainer/GridContainer/ItemSlot7"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
