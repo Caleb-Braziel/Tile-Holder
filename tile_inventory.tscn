@@ -1,5 +1,6 @@
-[gd_scene load_steps=2 format=3 uid="uid://yebyh6hle2y"]
+[gd_scene load_steps=3 format=3 uid="uid://yebyh6hle2y"]
 
+[ext_resource type="Script" uid="uid://dyedrjv0shy4f" path="res://item_slot.gd" id="1_r4hhf"]
 [ext_resource type="Texture2D" uid="uid://3jgoi3pih1fs" path="res://letter_A.png" id="1_t41hn"]
 
 [node name="TileInventory" type="Node3D"]
@@ -36,6 +37,7 @@ theme_override_constants/v_separation = 5
 [node name="ItemSlot" type="Panel" parent="Inventory/MarginContainer/GridContainer"]
 custom_minimum_size = Vector2(50, 50)
 layout_mode = 2
+script = ExtResource("1_r4hhf")
 
 [node name="TextureRect" type="TextureRect" parent="Inventory/MarginContainer/GridContainer/ItemSlot"]
 layout_mode = 1
