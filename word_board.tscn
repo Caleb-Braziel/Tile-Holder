@@ -1,8 +1,13 @@
-[gd_scene load_steps=4 format=3 uid="uid://xhu4eu0q86cm"]
+[gd_scene load_steps=9 format=3 uid="uid://xhu4eu0q86cm"]
 
 [ext_resource type="Texture2D" uid="uid://dpsdpm7xum1bs" path="res://Wood Tile.png" id="1_0ocgh"]
+[ext_resource type="Texture2D" uid="uid://chlh61a3jqktb" path="res://triple word.png" id="1_6hixq"]
 [ext_resource type="Script" uid="uid://dyedrjv0shy4f" path="res://item_slot.gd" id="2_qg17u"]
 [ext_resource type="Texture2D" uid="uid://3jgoi3pih1fs" path="res://letter_A.png" id="3_du8ke"]
+[ext_resource type="Texture2D" uid="uid://dmw7cwbqw2l7u" path="res://Double Letter.png" id="5_cw54h"]
+[ext_resource type="Texture2D" uid="uid://cr6w2vxd8oae0" path="res://double word.png" id="6_5ko4t"]
+[ext_resource type="Texture2D" uid="uid://yolbthahfd22" path="res://Triple letter.png" id="7_xkuoh"]
+[ext_resource type="Texture2D" uid="uid://bu288g54ytfcj" path="res://Center Tile.png" id="8_47qxc"]
 
 [node name="Word Board" type="Node3D"]
 
@@ -56,7 +61,7 @@ offset_right = 37.5
 offset_bottom = 37.5
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("1_0ocgh")
+texture = ExtResource("1_6hixq")
 expand_mode = 3
 
 [node name="ItemSlot" type="Panel" parent="Board Container/MarginContainer/Board/Row/Board Tile/TextureRect"]
@@ -195,7 +200,7 @@ offset_right = 37.5
 offset_bottom = 37.5
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("1_0ocgh")
+texture = ExtResource("5_cw54h")
 expand_mode = 3
 
 [node name="ItemSlot" type="Panel" parent="Board Container/MarginContainer/Board/Row/Board Tile4/TextureRect"]
@@ -379,7 +384,7 @@ offset_right = 37.5
 offset_bottom = 37.5
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("1_0ocgh")
+texture = ExtResource("1_6hixq")
 expand_mode = 3
 
 [node name="ItemSlot" type="Panel" parent="Board Container/MarginContainer/Board/Row/Board Tile8/TextureRect"]
@@ -563,7 +568,7 @@ offset_right = 37.5
 offset_bottom = 37.5
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("1_0ocgh")
+texture = ExtResource("5_cw54h")
 expand_mode = 3
 
 [node name="ItemSlot" type="Panel" parent="Board Container/MarginContainer/Board/Row/Board Tile12/TextureRect"]
@@ -701,7 +706,7 @@ offset_right = 37.5
 offset_bottom = 37.5
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("1_0ocgh")
+texture = ExtResource("1_6hixq")
 expand_mode = 3
 
 [node name="ItemSlot" type="Panel" parent="Board Container/MarginContainer/Board/Row/Board Tile15/TextureRect"]
@@ -799,7 +804,7 @@ offset_right = 37.5
 offset_bottom = 37.5
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("1_0ocgh")
+texture = ExtResource("6_5ko4t")
 expand_mode = 3
 
 [node name="ItemSlot" type="Panel" parent="Board Container/MarginContainer/Board/Row2/Board Tile2/TextureRect"]
@@ -983,7 +988,7 @@ offset_right = 37.5
 offset_bottom = 37.5
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("1_0ocgh")
+texture = ExtResource("7_xkuoh")
 expand_mode = 3
 
 [node name="ItemSlot" type="Panel" parent="Board Container/MarginContainer/Board/Row2/Board Tile6/TextureRect"]
@@ -1167,7 +1172,7 @@ offset_right = 37.5
 offset_bottom = 37.5
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("1_0ocgh")
+texture = ExtResource("7_xkuoh")
 expand_mode = 3
 
 [node name="ItemSlot" type="Panel" parent="Board Container/MarginContainer/Board/Row2/Board Tile10/TextureRect"]
@@ -1351,7 +1356,7 @@ offset_right = 37.5
 offset_bottom = 37.5
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("1_0ocgh")
+texture = ExtResource("6_5ko4t")
 expand_mode = 3
 
 [node name="ItemSlot" type="Panel" parent="Board Container/MarginContainer/Board/Row2/Board Tile14/TextureRect"]
@@ -1541,7 +1546,7 @@ offset_right = 37.5
 offset_bottom = 37.5
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("1_0ocgh")
+texture = ExtResource("6_5ko4t")
 expand_mode = 3
 
 [node name="ItemSlot" type="Panel" parent="Board Container/MarginContainer/Board/Row3/Board Tile3/TextureRect"]
@@ -1725,7 +1730,7 @@ offset_right = 37.5
 offset_bottom = 37.5
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("1_0ocgh")
+texture = ExtResource("5_cw54h")
 expand_mode = 3
 
 [node name="ItemSlot" type="Panel" parent="Board Container/MarginContainer/Board/Row3/Board Tile7/TextureRect"]
@@ -1817,7 +1822,7 @@ offset_right = 37.5
 offset_bottom = 37.5
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("1_0ocgh")
+texture = ExtResource("5_cw54h")
 expand_mode = 3
 
 [node name="ItemSlot" type="Panel" parent="Board Container/MarginContainer/Board/Row3/Board Tile9/TextureRect"]
@@ -2001,7 +2006,7 @@ offset_right = 37.5
 offset_bottom = 37.5
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("1_0ocgh")
+texture = ExtResource("6_5ko4t")
 expand_mode = 3
 
 [node name="ItemSlot" type="Panel" parent="Board Container/MarginContainer/Board/Row3/Board Tile13/TextureRect"]
@@ -2145,7 +2150,7 @@ offset_right = 37.5
 offset_bottom = 37.5
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("1_0ocgh")
+texture = ExtResource("5_cw54h")
 expand_mode = 3
 
 [node name="ItemSlot" type="Panel" parent="Board Container/MarginContainer/Board/Row4/Board Tile/TextureRect"]
@@ -2283,7 +2288,7 @@ offset_right = 37.5
 offset_bottom = 37.5
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("1_0ocgh")
+texture = ExtResource("6_5ko4t")
 expand_mode = 3
 
 [node name="ItemSlot" type="Panel" parent="Board Container/MarginContainer/Board/Row4/Board Tile4/TextureRect"]
@@ -2467,7 +2472,7 @@ offset_right = 37.5
 offset_bottom = 37.5
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("1_0ocgh")
+texture = ExtResource("5_cw54h")
 expand_mode = 3
 
 [node name="ItemSlot" type="Panel" parent="Board Container/MarginContainer/Board/Row4/Board Tile8/TextureRect"]
@@ -2651,7 +2656,7 @@ offset_right = 37.5
 offset_bottom = 37.5
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("1_0ocgh")
+texture = ExtResource("6_5ko4t")
 expand_mode = 3
 
 [node name="ItemSlot" type="Panel" parent="Board Container/MarginContainer/Board/Row4/Board Tile12/TextureRect"]
@@ -2789,7 +2794,7 @@ offset_right = 37.5
 offset_bottom = 37.5
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("1_0ocgh")
+texture = ExtResource("5_cw54h")
 expand_mode = 3
 
 [node name="ItemSlot" type="Panel" parent="Board Container/MarginContainer/Board/Row4/Board Tile15/TextureRect"]
@@ -3025,7 +3030,7 @@ offset_right = 37.5
 offset_bottom = 37.5
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("1_0ocgh")
+texture = ExtResource("6_5ko4t")
 expand_mode = 3
 
 [node name="ItemSlot" type="Panel" parent="Board Container/MarginContainer/Board/Row5/Board Tile5/TextureRect"]
@@ -3301,7 +3306,7 @@ offset_right = 37.5
 offset_bottom = 37.5
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("1_0ocgh")
+texture = ExtResource("6_5ko4t")
 expand_mode = 3
 
 [node name="ItemSlot" type="Panel" parent="Board Container/MarginContainer/Board/Row5/Board Tile11/TextureRect"]
@@ -3583,7 +3588,7 @@ offset_right = 37.5
 offset_bottom = 37.5
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("1_0ocgh")
+texture = ExtResource("7_xkuoh")
 expand_mode = 3
 
 [node name="ItemSlot" type="Panel" parent="Board Container/MarginContainer/Board/Row6/Board Tile2/TextureRect"]
@@ -3767,7 +3772,7 @@ offset_right = 37.5
 offset_bottom = 37.5
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("1_0ocgh")
+texture = ExtResource("7_xkuoh")
 expand_mode = 3
 
 [node name="ItemSlot" type="Panel" parent="Board Container/MarginContainer/Board/Row6/Board Tile6/TextureRect"]
@@ -3951,7 +3956,7 @@ offset_right = 37.5
 offset_bottom = 37.5
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("1_0ocgh")
+texture = ExtResource("7_xkuoh")
 expand_mode = 3
 
 [node name="ItemSlot" type="Panel" parent="Board Container/MarginContainer/Board/Row6/Board Tile10/TextureRect"]
@@ -4135,7 +4140,7 @@ offset_right = 37.5
 offset_bottom = 37.5
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("1_0ocgh")
+texture = ExtResource("7_xkuoh")
 expand_mode = 3
 
 [node name="ItemSlot" type="Panel" parent="Board Container/MarginContainer/Board/Row6/Board Tile14/TextureRect"]
@@ -4325,7 +4330,7 @@ offset_right = 37.5
 offset_bottom = 37.5
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("1_0ocgh")
+texture = ExtResource("5_cw54h")
 expand_mode = 3
 
 [node name="ItemSlot" type="Panel" parent="Board Container/MarginContainer/Board/Row7/Board Tile3/TextureRect"]
@@ -4509,7 +4514,7 @@ offset_right = 37.5
 offset_bottom = 37.5
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("1_0ocgh")
+texture = ExtResource("5_cw54h")
 expand_mode = 3
 
 [node name="ItemSlot" type="Panel" parent="Board Container/MarginContainer/Board/Row7/Board Tile7/TextureRect"]
@@ -4601,7 +4606,7 @@ offset_right = 37.5
 offset_bottom = 37.5
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("1_0ocgh")
+texture = ExtResource("5_cw54h")
 expand_mode = 3
 
 [node name="ItemSlot" type="Panel" parent="Board Container/MarginContainer/Board/Row7/Board Tile9/TextureRect"]
@@ -4785,7 +4790,7 @@ offset_right = 37.5
 offset_bottom = 37.5
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("1_0ocgh")
+texture = ExtResource("5_cw54h")
 expand_mode = 3
 
 [node name="ItemSlot" type="Panel" parent="Board Container/MarginContainer/Board/Row7/Board Tile13/TextureRect"]
@@ -4929,7 +4934,7 @@ offset_right = 37.5
 offset_bottom = 37.5
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("1_0ocgh")
+texture = ExtResource("1_6hixq")
 expand_mode = 3
 
 [node name="ItemSlot" type="Panel" parent="Board Container/MarginContainer/Board/Row8/Board Tile/TextureRect"]
@@ -5067,7 +5072,7 @@ offset_right = 37.5
 offset_bottom = 37.5
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("1_0ocgh")
+texture = ExtResource("5_cw54h")
 expand_mode = 3
 
 [node name="ItemSlot" type="Panel" parent="Board Container/MarginContainer/Board/Row8/Board Tile4/TextureRect"]
@@ -5251,7 +5256,7 @@ offset_right = 37.5
 offset_bottom = 37.5
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("1_0ocgh")
+texture = ExtResource("8_47qxc")
 expand_mode = 3
 
 [node name="ItemSlot" type="Panel" parent="Board Container/MarginContainer/Board/Row8/Board Tile8/TextureRect"]
@@ -5435,7 +5440,7 @@ offset_right = 37.5
 offset_bottom = 37.5
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("1_0ocgh")
+texture = ExtResource("5_cw54h")
 expand_mode = 3
 
 [node name="ItemSlot" type="Panel" parent="Board Container/MarginContainer/Board/Row8/Board Tile12/TextureRect"]
@@ -5573,7 +5578,7 @@ offset_right = 37.5
 offset_bottom = 37.5
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("1_0ocgh")
+texture = ExtResource("1_6hixq")
 expand_mode = 3
 
 [node name="ItemSlot" type="Panel" parent="Board Container/MarginContainer/Board/Row8/Board Tile15/TextureRect"]
