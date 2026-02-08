@@ -1,3 +1,5603 @@
-[gd_scene format=3 uid="uid://xhu4eu0q86cm"]
+[gd_scene load_steps=4 format=3 uid="uid://xhu4eu0q86cm"]
+
+[ext_resource type="Texture2D" uid="uid://dpsdpm7xum1bs" path="res://Wood Tile.png" id="1_0ocgh"]
+[ext_resource type="Script" uid="uid://dyedrjv0shy4f" path="res://item_slot.gd" id="2_qg17u"]
+[ext_resource type="Texture2D" uid="uid://3jgoi3pih1fs" path="res://letter_A.png" id="3_du8ke"]
 
 [node name="Word Board" type="Node3D"]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Board Container" type="Panel" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -602.5
+offset_top = -595.0
+offset_right = 602.5
+offset_bottom = 595.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="Board Container"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="Board" type="GridContainer" parent="Board Container/MarginContainer"]
+layout_mode = 2
+
+[node name="Row" type="GridContainer" parent="Board Container/MarginContainer/Board"]
+layout_mode = 2
+theme_override_constants/h_separation = 5
+theme_override_constants/v_separation = 5
+columns = 15
+
+[node name="Board Tile" type="Panel" parent="Board Container/MarginContainer/Board/Row"]
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="Board Container/MarginContainer/Board/Row/Board Tile"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -37.5
+offset_top = -37.5
+offset_right = 37.5
+offset_bottom = 37.5
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_0ocgh")
+expand_mode = 3
+
+[node name="ItemSlot" type="Panel" parent="Board Container/MarginContainer/Board/Row/Board Tile/TextureRect"]
+custom_minimum_size = Vector2(52, 52)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -25.0
+offset_top = -25.0
+offset_right = 25.0
+offset_bottom = 25.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("2_qg17u")
+
+[node name="TextureRect" type="TextureRect" parent="Board Container/MarginContainer/Board/Row/Board Tile/TextureRect/ItemSlot"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_du8ke")
+expand_mode = 3
+stretch_mode = 4
+
+[node name="Board Tile2" type="Panel" parent="Board Container/MarginContainer/Board/Row"]
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="Board Container/MarginContainer/Board/Row/Board Tile2"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -37.5
+offset_top = -37.5
+offset_right = 37.5
+offset_bottom = 37.5
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_0ocgh")
+expand_mode = 3
+
+[node name="ItemSlot" type="Panel" parent="Board Container/MarginContainer/Board/Row/Board Tile2/TextureRect"]
+custom_minimum_size = Vector2(52, 52)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -25.0
+offset_top = -25.0
+offset_right = 25.0
+offset_bottom = 25.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("2_qg17u")
+
+[node name="TextureRect" type="TextureRect" parent="Board Container/MarginContainer/Board/Row/Board Tile2/TextureRect/ItemSlot"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 3
+stretch_mode = 4
+
+[node name="Board Tile3" type="Panel" parent="Board Container/MarginContainer/Board/Row"]
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="Board Container/MarginContainer/Board/Row/Board Tile3"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -37.5
+offset_top = -37.5
+offset_right = 37.5
+offset_bottom = 37.5
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_0ocgh")
+expand_mode = 3
+
+[node name="ItemSlot" type="Panel" parent="Board Container/MarginContainer/Board/Row/Board Tile3/TextureRect"]
+custom_minimum_size = Vector2(52, 52)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -25.0
+offset_top = -25.0
+offset_right = 25.0
+offset_bottom = 25.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("2_qg17u")
+
+[node name="TextureRect" type="TextureRect" parent="Board Container/MarginContainer/Board/Row/Board Tile3/TextureRect/ItemSlot"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 3
+stretch_mode = 4
+
+[node name="Board Tile4" type="Panel" parent="Board Container/MarginContainer/Board/Row"]
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="Board Container/MarginContainer/Board/Row/Board Tile4"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -37.5
+offset_top = -37.5
+offset_right = 37.5
+offset_bottom = 37.5
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_0ocgh")
+expand_mode = 3
+
+[node name="ItemSlot" type="Panel" parent="Board Container/MarginContainer/Board/Row/Board Tile4/TextureRect"]
+custom_minimum_size = Vector2(52, 52)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -25.0
+offset_top = -25.0
+offset_right = 25.0
+offset_bottom = 25.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("2_qg17u")
+
+[node name="TextureRect" type="TextureRect" parent="Board Container/MarginContainer/Board/Row/Board Tile4/TextureRect/ItemSlot"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 3
+stretch_mode = 4
+
+[node name="Board Tile5" type="Panel" parent="Board Container/MarginContainer/Board/Row"]
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="Board Container/MarginContainer/Board/Row/Board Tile5"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -37.5
+offset_top = -37.5
+offset_right = 37.5
+offset_bottom = 37.5
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_0ocgh")
+expand_mode = 3
+
+[node name="ItemSlot" type="Panel" parent="Board Container/MarginContainer/Board/Row/Board Tile5/TextureRect"]
+custom_minimum_size = Vector2(52, 52)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -25.0
+offset_top = -25.0
+offset_right = 25.0
+offset_bottom = 25.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("2_qg17u")
+
+[node name="TextureRect" type="TextureRect" parent="Board Container/MarginContainer/Board/Row/Board Tile5/TextureRect/ItemSlot"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 3
+stretch_mode = 4
+
+[node name="Board Tile6" type="Panel" parent="Board Container/MarginContainer/Board/Row"]
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="Board Container/MarginContainer/Board/Row/Board Tile6"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -37.5
+offset_top = -37.5
+offset_right = 37.5
+offset_bottom = 37.5
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_0ocgh")
+expand_mode = 3
+
+[node name="ItemSlot" type="Panel" parent="Board Container/MarginContainer/Board/Row/Board Tile6/TextureRect"]
+custom_minimum_size = Vector2(52, 52)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -25.0
+offset_top = -25.0
+offset_right = 25.0
+offset_bottom = 25.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("2_qg17u")
+
+[node name="TextureRect" type="TextureRect" parent="Board Container/MarginContainer/Board/Row/Board Tile6/TextureRect/ItemSlot"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 3
+stretch_mode = 4
+
+[node name="Board Tile7" type="Panel" parent="Board Container/MarginContainer/Board/Row"]
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="Board Container/MarginContainer/Board/Row/Board Tile7"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -37.5
+offset_top = -37.5
+offset_right = 37.5
+offset_bottom = 37.5
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_0ocgh")
+expand_mode = 3
+
+[node name="ItemSlot" type="Panel" parent="Board Container/MarginContainer/Board/Row/Board Tile7/TextureRect"]
+custom_minimum_size = Vector2(52, 52)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -25.0
+offset_top = -25.0
+offset_right = 25.0
+offset_bottom = 25.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("2_qg17u")
+
+[node name="TextureRect" type="TextureRect" parent="Board Container/MarginContainer/Board/Row/Board Tile7/TextureRect/ItemSlot"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 3
+stretch_mode = 4
+
+[node name="Board Tile8" type="Panel" parent="Board Container/MarginContainer/Board/Row"]
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="Board Container/MarginContainer/Board/Row/Board Tile8"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -37.5
+offset_top = -37.5
+offset_right = 37.5
+offset_bottom = 37.5
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_0ocgh")
+expand_mode = 3
+
+[node name="ItemSlot" type="Panel" parent="Board Container/MarginContainer/Board/Row/Board Tile8/TextureRect"]
+custom_minimum_size = Vector2(52, 52)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -25.0
+offset_top = -25.0
+offset_right = 25.0
+offset_bottom = 25.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("2_qg17u")
+
+[node name="TextureRect" type="TextureRect" parent="Board Container/MarginContainer/Board/Row/Board Tile8/TextureRect/ItemSlot"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 3
+stretch_mode = 4
+
+[node name="Board Tile9" type="Panel" parent="Board Container/MarginContainer/Board/Row"]
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="Board Container/MarginContainer/Board/Row/Board Tile9"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -37.5
+offset_top = -37.5
+offset_right = 37.5
+offset_bottom = 37.5
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_0ocgh")
+expand_mode = 3
+
+[node name="ItemSlot" type="Panel" parent="Board Container/MarginContainer/Board/Row/Board Tile9/TextureRect"]
+custom_minimum_size = Vector2(52, 52)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -25.0
+offset_top = -25.0
+offset_right = 25.0
+offset_bottom = 25.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("2_qg17u")
+
+[node name="TextureRect" type="TextureRect" parent="Board Container/MarginContainer/Board/Row/Board Tile9/TextureRect/ItemSlot"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 3
+stretch_mode = 4
+
+[node name="Board Tile10" type="Panel" parent="Board Container/MarginContainer/Board/Row"]
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="Board Container/MarginContainer/Board/Row/Board Tile10"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -37.5
+offset_top = -37.5
+offset_right = 37.5
+offset_bottom = 37.5
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_0ocgh")
+expand_mode = 3
+
+[node name="ItemSlot" type="Panel" parent="Board Container/MarginContainer/Board/Row/Board Tile10/TextureRect"]
+custom_minimum_size = Vector2(52, 52)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -25.0
+offset_top = -25.0
+offset_right = 25.0
+offset_bottom = 25.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("2_qg17u")
+
+[node name="TextureRect" type="TextureRect" parent="Board Container/MarginContainer/Board/Row/Board Tile10/TextureRect/ItemSlot"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 3
+stretch_mode = 4
+
+[node name="Board Tile11" type="Panel" parent="Board Container/MarginContainer/Board/Row"]
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="Board Container/MarginContainer/Board/Row/Board Tile11"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -37.5
+offset_top = -37.5
+offset_right = 37.5
+offset_bottom = 37.5
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_0ocgh")
+expand_mode = 3
+
+[node name="ItemSlot" type="Panel" parent="Board Container/MarginContainer/Board/Row/Board Tile11/TextureRect"]
+custom_minimum_size = Vector2(52, 52)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -25.0
+offset_top = -25.0
+offset_right = 25.0
+offset_bottom = 25.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("2_qg17u")
+
+[node name="TextureRect" type="TextureRect" parent="Board Container/MarginContainer/Board/Row/Board Tile11/TextureRect/ItemSlot"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 3
+stretch_mode = 4
+
+[node name="Board Tile12" type="Panel" parent="Board Container/MarginContainer/Board/Row"]
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="Board Container/MarginContainer/Board/Row/Board Tile12"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -37.5
+offset_top = -37.5
+offset_right = 37.5
+offset_bottom = 37.5
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_0ocgh")
+expand_mode = 3
+
+[node name="ItemSlot" type="Panel" parent="Board Container/MarginContainer/Board/Row/Board Tile12/TextureRect"]
+custom_minimum_size = Vector2(52, 52)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -25.0
+offset_top = -25.0
+offset_right = 25.0
+offset_bottom = 25.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("2_qg17u")
+
+[node name="TextureRect" type="TextureRect" parent="Board Container/MarginContainer/Board/Row/Board Tile12/TextureRect/ItemSlot"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 3
+stretch_mode = 4
+
+[node name="Board Tile13" type="Panel" parent="Board Container/MarginContainer/Board/Row"]
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="Board Container/MarginContainer/Board/Row/Board Tile13"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -37.5
+offset_top = -37.5
+offset_right = 37.5
+offset_bottom = 37.5
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_0ocgh")
+expand_mode = 3
+
+[node name="ItemSlot" type="Panel" parent="Board Container/MarginContainer/Board/Row/Board Tile13/TextureRect"]
+custom_minimum_size = Vector2(52, 52)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -25.0
+offset_top = -25.0
+offset_right = 25.0
+offset_bottom = 25.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("2_qg17u")
+
+[node name="TextureRect" type="TextureRect" parent="Board Container/MarginContainer/Board/Row/Board Tile13/TextureRect/ItemSlot"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 3
+stretch_mode = 4
+
+[node name="Board Tile14" type="Panel" parent="Board Container/MarginContainer/Board/Row"]
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="Board Container/MarginContainer/Board/Row/Board Tile14"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -37.5
+offset_top = -37.5
+offset_right = 37.5
+offset_bottom = 37.5
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_0ocgh")
+expand_mode = 3
+
+[node name="ItemSlot" type="Panel" parent="Board Container/MarginContainer/Board/Row/Board Tile14/TextureRect"]
+custom_minimum_size = Vector2(52, 52)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -25.0
+offset_top = -25.0
+offset_right = 25.0
+offset_bottom = 25.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("2_qg17u")
+
+[node name="TextureRect" type="TextureRect" parent="Board Container/MarginContainer/Board/Row/Board Tile14/TextureRect/ItemSlot"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 3
+stretch_mode = 4
+
+[node name="Board Tile15" type="Panel" parent="Board Container/MarginContainer/Board/Row"]
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="Board Container/MarginContainer/Board/Row/Board Tile15"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -37.5
+offset_top = -37.5
+offset_right = 37.5
+offset_bottom = 37.5
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_0ocgh")
+expand_mode = 3
+
+[node name="ItemSlot" type="Panel" parent="Board Container/MarginContainer/Board/Row/Board Tile15/TextureRect"]
+custom_minimum_size = Vector2(52, 52)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -25.0
+offset_top = -25.0
+offset_right = 25.0
+offset_bottom = 25.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("2_qg17u")
+
+[node name="TextureRect" type="TextureRect" parent="Board Container/MarginContainer/Board/Row/Board Tile15/TextureRect/ItemSlot"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 3
+stretch_mode = 4
+
+[node name="Row2" type="GridContainer" parent="Board Container/MarginContainer/Board"]
+layout_mode = 2
+theme_override_constants/h_separation = 5
+theme_override_constants/v_separation = 5
+columns = 15
+
+[node name="Board Tile" type="Panel" parent="Board Container/MarginContainer/Board/Row2"]
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="Board Container/MarginContainer/Board/Row2/Board Tile"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -37.5
+offset_top = -37.5
+offset_right = 37.5
+offset_bottom = 37.5
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_0ocgh")
+expand_mode = 3
+
+[node name="ItemSlot" type="Panel" parent="Board Container/MarginContainer/Board/Row2/Board Tile/TextureRect"]
+custom_minimum_size = Vector2(52, 52)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -25.0
+offset_top = -25.0
+offset_right = 25.0
+offset_bottom = 25.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("2_qg17u")
+
+[node name="TextureRect" type="TextureRect" parent="Board Container/MarginContainer/Board/Row2/Board Tile/TextureRect/ItemSlot"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 3
+stretch_mode = 4
+
+[node name="Board Tile2" type="Panel" parent="Board Container/MarginContainer/Board/Row2"]
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="Board Container/MarginContainer/Board/Row2/Board Tile2"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -37.5
+offset_top = -37.5
+offset_right = 37.5
+offset_bottom = 37.5
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_0ocgh")
+expand_mode = 3
+
+[node name="ItemSlot" type="Panel" parent="Board Container/MarginContainer/Board/Row2/Board Tile2/TextureRect"]
+custom_minimum_size = Vector2(52, 52)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -25.0
+offset_top = -25.0
+offset_right = 25.0
+offset_bottom = 25.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("2_qg17u")
+
+[node name="TextureRect" type="TextureRect" parent="Board Container/MarginContainer/Board/Row2/Board Tile2/TextureRect/ItemSlot"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 3
+stretch_mode = 4
+
+[node name="Board Tile3" type="Panel" parent="Board Container/MarginContainer/Board/Row2"]
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="Board Container/MarginContainer/Board/Row2/Board Tile3"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -37.5
+offset_top = -37.5
+offset_right = 37.5
+offset_bottom = 37.5
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_0ocgh")
+expand_mode = 3
+
+[node name="ItemSlot" type="Panel" parent="Board Container/MarginContainer/Board/Row2/Board Tile3/TextureRect"]
+custom_minimum_size = Vector2(52, 52)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -25.0
+offset_top = -25.0
+offset_right = 25.0
+offset_bottom = 25.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("2_qg17u")
+
+[node name="TextureRect" type="TextureRect" parent="Board Container/MarginContainer/Board/Row2/Board Tile3/TextureRect/ItemSlot"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 3
+stretch_mode = 4
+
+[node name="Board Tile4" type="Panel" parent="Board Container/MarginContainer/Board/Row2"]
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="Board Container/MarginContainer/Board/Row2/Board Tile4"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -37.5
+offset_top = -37.5
+offset_right = 37.5
+offset_bottom = 37.5
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_0ocgh")
+expand_mode = 3
+
+[node name="ItemSlot" type="Panel" parent="Board Container/MarginContainer/Board/Row2/Board Tile4/TextureRect"]
+custom_minimum_size = Vector2(52, 52)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -25.0
+offset_top = -25.0
+offset_right = 25.0
+offset_bottom = 25.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("2_qg17u")
+
+[node name="TextureRect" type="TextureRect" parent="Board Container/MarginContainer/Board/Row2/Board Tile4/TextureRect/ItemSlot"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 3
+stretch_mode = 4
+
+[node name="Board Tile5" type="Panel" parent="Board Container/MarginContainer/Board/Row2"]
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="Board Container/MarginContainer/Board/Row2/Board Tile5"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -37.5
+offset_top = -37.5
+offset_right = 37.5
+offset_bottom = 37.5
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_0ocgh")
+expand_mode = 3
+
+[node name="ItemSlot" type="Panel" parent="Board Container/MarginContainer/Board/Row2/Board Tile5/TextureRect"]
+custom_minimum_size = Vector2(52, 52)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -25.0
+offset_top = -25.0
+offset_right = 25.0
+offset_bottom = 25.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("2_qg17u")
+
+[node name="TextureRect" type="TextureRect" parent="Board Container/MarginContainer/Board/Row2/Board Tile5/TextureRect/ItemSlot"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 3
+stretch_mode = 4
+
+[node name="Board Tile6" type="Panel" parent="Board Container/MarginContainer/Board/Row2"]
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="Board Container/MarginContainer/Board/Row2/Board Tile6"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -37.5
+offset_top = -37.5
+offset_right = 37.5
+offset_bottom = 37.5
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_0ocgh")
+expand_mode = 3
+
+[node name="ItemSlot" type="Panel" parent="Board Container/MarginContainer/Board/Row2/Board Tile6/TextureRect"]
+custom_minimum_size = Vector2(52, 52)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -25.0
+offset_top = -25.0
+offset_right = 25.0
+offset_bottom = 25.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("2_qg17u")
+
+[node name="TextureRect" type="TextureRect" parent="Board Container/MarginContainer/Board/Row2/Board Tile6/TextureRect/ItemSlot"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 3
+stretch_mode = 4
+
+[node name="Board Tile7" type="Panel" parent="Board Container/MarginContainer/Board/Row2"]
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="Board Container/MarginContainer/Board/Row2/Board Tile7"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -37.5
+offset_top = -37.5
+offset_right = 37.5
+offset_bottom = 37.5
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_0ocgh")
+expand_mode = 3
+
+[node name="ItemSlot" type="Panel" parent="Board Container/MarginContainer/Board/Row2/Board Tile7/TextureRect"]
+custom_minimum_size = Vector2(52, 52)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -25.0
+offset_top = -25.0
+offset_right = 25.0
+offset_bottom = 25.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("2_qg17u")
+
+[node name="TextureRect" type="TextureRect" parent="Board Container/MarginContainer/Board/Row2/Board Tile7/TextureRect/ItemSlot"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 3
+stretch_mode = 4
+
+[node name="Board Tile8" type="Panel" parent="Board Container/MarginContainer/Board/Row2"]
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="Board Container/MarginContainer/Board/Row2/Board Tile8"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -37.5
+offset_top = -37.5
+offset_right = 37.5
+offset_bottom = 37.5
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_0ocgh")
+expand_mode = 3
+
+[node name="ItemSlot" type="Panel" parent="Board Container/MarginContainer/Board/Row2/Board Tile8/TextureRect"]
+custom_minimum_size = Vector2(52, 52)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -25.0
+offset_top = -25.0
+offset_right = 25.0
+offset_bottom = 25.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("2_qg17u")
+
+[node name="TextureRect" type="TextureRect" parent="Board Container/MarginContainer/Board/Row2/Board Tile8/TextureRect/ItemSlot"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 3
+stretch_mode = 4
+
+[node name="Board Tile9" type="Panel" parent="Board Container/MarginContainer/Board/Row2"]
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="Board Container/MarginContainer/Board/Row2/Board Tile9"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -37.5
+offset_top = -37.5
+offset_right = 37.5
+offset_bottom = 37.5
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_0ocgh")
+expand_mode = 3
+
+[node name="ItemSlot" type="Panel" parent="Board Container/MarginContainer/Board/Row2/Board Tile9/TextureRect"]
+custom_minimum_size = Vector2(52, 52)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -25.0
+offset_top = -25.0
+offset_right = 25.0
+offset_bottom = 25.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("2_qg17u")
+
+[node name="TextureRect" type="TextureRect" parent="Board Container/MarginContainer/Board/Row2/Board Tile9/TextureRect/ItemSlot"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 3
+stretch_mode = 4
+
+[node name="Board Tile10" type="Panel" parent="Board Container/MarginContainer/Board/Row2"]
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="Board Container/MarginContainer/Board/Row2/Board Tile10"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -37.5
+offset_top = -37.5
+offset_right = 37.5
+offset_bottom = 37.5
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_0ocgh")
+expand_mode = 3
+
+[node name="ItemSlot" type="Panel" parent="Board Container/MarginContainer/Board/Row2/Board Tile10/TextureRect"]
+custom_minimum_size = Vector2(52, 52)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -25.0
+offset_top = -25.0
+offset_right = 25.0
+offset_bottom = 25.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("2_qg17u")
+
+[node name="TextureRect" type="TextureRect" parent="Board Container/MarginContainer/Board/Row2/Board Tile10/TextureRect/ItemSlot"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 3
+stretch_mode = 4
+
+[node name="Board Tile11" type="Panel" parent="Board Container/MarginContainer/Board/Row2"]
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="Board Container/MarginContainer/Board/Row2/Board Tile11"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -37.5
+offset_top = -37.5
+offset_right = 37.5
+offset_bottom = 37.5
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_0ocgh")
+expand_mode = 3
+
+[node name="ItemSlot" type="Panel" parent="Board Container/MarginContainer/Board/Row2/Board Tile11/TextureRect"]
+custom_minimum_size = Vector2(52, 52)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -25.0
+offset_top = -25.0
+offset_right = 25.0
+offset_bottom = 25.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("2_qg17u")
+
+[node name="TextureRect" type="TextureRect" parent="Board Container/MarginContainer/Board/Row2/Board Tile11/TextureRect/ItemSlot"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 3
+stretch_mode = 4
+
+[node name="Board Tile12" type="Panel" parent="Board Container/MarginContainer/Board/Row2"]
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="Board Container/MarginContainer/Board/Row2/Board Tile12"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -37.5
+offset_top = -37.5
+offset_right = 37.5
+offset_bottom = 37.5
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_0ocgh")
+expand_mode = 3
+
+[node name="ItemSlot" type="Panel" parent="Board Container/MarginContainer/Board/Row2/Board Tile12/TextureRect"]
+custom_minimum_size = Vector2(52, 52)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -25.0
+offset_top = -25.0
+offset_right = 25.0
+offset_bottom = 25.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("2_qg17u")
+
+[node name="TextureRect" type="TextureRect" parent="Board Container/MarginContainer/Board/Row2/Board Tile12/TextureRect/ItemSlot"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 3
+stretch_mode = 4
+
+[node name="Board Tile13" type="Panel" parent="Board Container/MarginContainer/Board/Row2"]
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="Board Container/MarginContainer/Board/Row2/Board Tile13"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -37.5
+offset_top = -37.5
+offset_right = 37.5
+offset_bottom = 37.5
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_0ocgh")
+expand_mode = 3
+
+[node name="ItemSlot" type="Panel" parent="Board Container/MarginContainer/Board/Row2/Board Tile13/TextureRect"]
+custom_minimum_size = Vector2(52, 52)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -25.0
+offset_top = -25.0
+offset_right = 25.0
+offset_bottom = 25.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("2_qg17u")
+
+[node name="TextureRect" type="TextureRect" parent="Board Container/MarginContainer/Board/Row2/Board Tile13/TextureRect/ItemSlot"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 3
+stretch_mode = 4
+
+[node name="Board Tile14" type="Panel" parent="Board Container/MarginContainer/Board/Row2"]
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="Board Container/MarginContainer/Board/Row2/Board Tile14"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -37.5
+offset_top = -37.5
+offset_right = 37.5
+offset_bottom = 37.5
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_0ocgh")
+expand_mode = 3
+
+[node name="ItemSlot" type="Panel" parent="Board Container/MarginContainer/Board/Row2/Board Tile14/TextureRect"]
+custom_minimum_size = Vector2(52, 52)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -25.0
+offset_top = -25.0
+offset_right = 25.0
+offset_bottom = 25.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("2_qg17u")
+
+[node name="TextureRect" type="TextureRect" parent="Board Container/MarginContainer/Board/Row2/Board Tile14/TextureRect/ItemSlot"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 3
+stretch_mode = 4
+
+[node name="Board Tile15" type="Panel" parent="Board Container/MarginContainer/Board/Row2"]
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="Board Container/MarginContainer/Board/Row2/Board Tile15"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -37.5
+offset_top = -37.5
+offset_right = 37.5
+offset_bottom = 37.5
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_0ocgh")
+expand_mode = 3
+
+[node name="ItemSlot" type="Panel" parent="Board Container/MarginContainer/Board/Row2/Board Tile15/TextureRect"]
+custom_minimum_size = Vector2(52, 52)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -25.0
+offset_top = -25.0
+offset_right = 25.0
+offset_bottom = 25.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("2_qg17u")
+
+[node name="TextureRect" type="TextureRect" parent="Board Container/MarginContainer/Board/Row2/Board Tile15/TextureRect/ItemSlot"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 3
+stretch_mode = 4
+
+[node name="Row3" type="GridContainer" parent="Board Container/MarginContainer/Board"]
+layout_mode = 2
+theme_override_constants/h_separation = 5
+theme_override_constants/v_separation = 5
+columns = 15
+
+[node name="Board Tile" type="Panel" parent="Board Container/MarginContainer/Board/Row3"]
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="Board Container/MarginContainer/Board/Row3/Board Tile"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -37.5
+offset_top = -37.5
+offset_right = 37.5
+offset_bottom = 37.5
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_0ocgh")
+expand_mode = 3
+
+[node name="ItemSlot" type="Panel" parent="Board Container/MarginContainer/Board/Row3/Board Tile/TextureRect"]
+custom_minimum_size = Vector2(52, 52)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -25.0
+offset_top = -25.0
+offset_right = 25.0
+offset_bottom = 25.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("2_qg17u")
+
+[node name="TextureRect" type="TextureRect" parent="Board Container/MarginContainer/Board/Row3/Board Tile/TextureRect/ItemSlot"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 3
+stretch_mode = 4
+
+[node name="Board Tile2" type="Panel" parent="Board Container/MarginContainer/Board/Row3"]
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="Board Container/MarginContainer/Board/Row3/Board Tile2"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -37.5
+offset_top = -37.5
+offset_right = 37.5
+offset_bottom = 37.5
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_0ocgh")
+expand_mode = 3
+
+[node name="ItemSlot" type="Panel" parent="Board Container/MarginContainer/Board/Row3/Board Tile2/TextureRect"]
+custom_minimum_size = Vector2(52, 52)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -25.0
+offset_top = -25.0
+offset_right = 25.0
+offset_bottom = 25.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("2_qg17u")
+
+[node name="TextureRect" type="TextureRect" parent="Board Container/MarginContainer/Board/Row3/Board Tile2/TextureRect/ItemSlot"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 3
+stretch_mode = 4
+
+[node name="Board Tile3" type="Panel" parent="Board Container/MarginContainer/Board/Row3"]
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="Board Container/MarginContainer/Board/Row3/Board Tile3"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -37.5
+offset_top = -37.5
+offset_right = 37.5
+offset_bottom = 37.5
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_0ocgh")
+expand_mode = 3
+
+[node name="ItemSlot" type="Panel" parent="Board Container/MarginContainer/Board/Row3/Board Tile3/TextureRect"]
+custom_minimum_size = Vector2(52, 52)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -25.0
+offset_top = -25.0
+offset_right = 25.0
+offset_bottom = 25.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("2_qg17u")
+
+[node name="TextureRect" type="TextureRect" parent="Board Container/MarginContainer/Board/Row3/Board Tile3/TextureRect/ItemSlot"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 3
+stretch_mode = 4
+
+[node name="Board Tile4" type="Panel" parent="Board Container/MarginContainer/Board/Row3"]
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="Board Container/MarginContainer/Board/Row3/Board Tile4"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -37.5
+offset_top = -37.5
+offset_right = 37.5
+offset_bottom = 37.5
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_0ocgh")
+expand_mode = 3
+
+[node name="ItemSlot" type="Panel" parent="Board Container/MarginContainer/Board/Row3/Board Tile4/TextureRect"]
+custom_minimum_size = Vector2(52, 52)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -25.0
+offset_top = -25.0
+offset_right = 25.0
+offset_bottom = 25.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("2_qg17u")
+
+[node name="TextureRect" type="TextureRect" parent="Board Container/MarginContainer/Board/Row3/Board Tile4/TextureRect/ItemSlot"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 3
+stretch_mode = 4
+
+[node name="Board Tile5" type="Panel" parent="Board Container/MarginContainer/Board/Row3"]
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="Board Container/MarginContainer/Board/Row3/Board Tile5"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -37.5
+offset_top = -37.5
+offset_right = 37.5
+offset_bottom = 37.5
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_0ocgh")
+expand_mode = 3
+
+[node name="ItemSlot" type="Panel" parent="Board Container/MarginContainer/Board/Row3/Board Tile5/TextureRect"]
+custom_minimum_size = Vector2(52, 52)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -25.0
+offset_top = -25.0
+offset_right = 25.0
+offset_bottom = 25.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("2_qg17u")
+
+[node name="TextureRect" type="TextureRect" parent="Board Container/MarginContainer/Board/Row3/Board Tile5/TextureRect/ItemSlot"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 3
+stretch_mode = 4
+
+[node name="Board Tile6" type="Panel" parent="Board Container/MarginContainer/Board/Row3"]
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="Board Container/MarginContainer/Board/Row3/Board Tile6"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -37.5
+offset_top = -37.5
+offset_right = 37.5
+offset_bottom = 37.5
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_0ocgh")
+expand_mode = 3
+
+[node name="ItemSlot" type="Panel" parent="Board Container/MarginContainer/Board/Row3/Board Tile6/TextureRect"]
+custom_minimum_size = Vector2(52, 52)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -25.0
+offset_top = -25.0
+offset_right = 25.0
+offset_bottom = 25.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("2_qg17u")
+
+[node name="TextureRect" type="TextureRect" parent="Board Container/MarginContainer/Board/Row3/Board Tile6/TextureRect/ItemSlot"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 3
+stretch_mode = 4
+
+[node name="Board Tile7" type="Panel" parent="Board Container/MarginContainer/Board/Row3"]
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="Board Container/MarginContainer/Board/Row3/Board Tile7"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -37.5
+offset_top = -37.5
+offset_right = 37.5
+offset_bottom = 37.5
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_0ocgh")
+expand_mode = 3
+
+[node name="ItemSlot" type="Panel" parent="Board Container/MarginContainer/Board/Row3/Board Tile7/TextureRect"]
+custom_minimum_size = Vector2(52, 52)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -25.0
+offset_top = -25.0
+offset_right = 25.0
+offset_bottom = 25.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("2_qg17u")
+
+[node name="TextureRect" type="TextureRect" parent="Board Container/MarginContainer/Board/Row3/Board Tile7/TextureRect/ItemSlot"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 3
+stretch_mode = 4
+
+[node name="Board Tile8" type="Panel" parent="Board Container/MarginContainer/Board/Row3"]
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="Board Container/MarginContainer/Board/Row3/Board Tile8"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -37.5
+offset_top = -37.5
+offset_right = 37.5
+offset_bottom = 37.5
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_0ocgh")
+expand_mode = 3
+
+[node name="ItemSlot" type="Panel" parent="Board Container/MarginContainer/Board/Row3/Board Tile8/TextureRect"]
+custom_minimum_size = Vector2(52, 52)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -25.0
+offset_top = -25.0
+offset_right = 25.0
+offset_bottom = 25.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("2_qg17u")
+
+[node name="TextureRect" type="TextureRect" parent="Board Container/MarginContainer/Board/Row3/Board Tile8/TextureRect/ItemSlot"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 3
+stretch_mode = 4
+
+[node name="Board Tile9" type="Panel" parent="Board Container/MarginContainer/Board/Row3"]
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="Board Container/MarginContainer/Board/Row3/Board Tile9"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -37.5
+offset_top = -37.5
+offset_right = 37.5
+offset_bottom = 37.5
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_0ocgh")
+expand_mode = 3
+
+[node name="ItemSlot" type="Panel" parent="Board Container/MarginContainer/Board/Row3/Board Tile9/TextureRect"]
+custom_minimum_size = Vector2(52, 52)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -25.0
+offset_top = -25.0
+offset_right = 25.0
+offset_bottom = 25.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("2_qg17u")
+
+[node name="TextureRect" type="TextureRect" parent="Board Container/MarginContainer/Board/Row3/Board Tile9/TextureRect/ItemSlot"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 3
+stretch_mode = 4
+
+[node name="Board Tile10" type="Panel" parent="Board Container/MarginContainer/Board/Row3"]
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="Board Container/MarginContainer/Board/Row3/Board Tile10"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -37.5
+offset_top = -37.5
+offset_right = 37.5
+offset_bottom = 37.5
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_0ocgh")
+expand_mode = 3
+
+[node name="ItemSlot" type="Panel" parent="Board Container/MarginContainer/Board/Row3/Board Tile10/TextureRect"]
+custom_minimum_size = Vector2(52, 52)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -25.0
+offset_top = -25.0
+offset_right = 25.0
+offset_bottom = 25.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("2_qg17u")
+
+[node name="TextureRect" type="TextureRect" parent="Board Container/MarginContainer/Board/Row3/Board Tile10/TextureRect/ItemSlot"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 3
+stretch_mode = 4
+
+[node name="Board Tile11" type="Panel" parent="Board Container/MarginContainer/Board/Row3"]
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="Board Container/MarginContainer/Board/Row3/Board Tile11"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -37.5
+offset_top = -37.5
+offset_right = 37.5
+offset_bottom = 37.5
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_0ocgh")
+expand_mode = 3
+
+[node name="ItemSlot" type="Panel" parent="Board Container/MarginContainer/Board/Row3/Board Tile11/TextureRect"]
+custom_minimum_size = Vector2(52, 52)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -25.0
+offset_top = -25.0
+offset_right = 25.0
+offset_bottom = 25.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("2_qg17u")
+
+[node name="TextureRect" type="TextureRect" parent="Board Container/MarginContainer/Board/Row3/Board Tile11/TextureRect/ItemSlot"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 3
+stretch_mode = 4
+
+[node name="Board Tile12" type="Panel" parent="Board Container/MarginContainer/Board/Row3"]
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="Board Container/MarginContainer/Board/Row3/Board Tile12"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -37.5
+offset_top = -37.5
+offset_right = 37.5
+offset_bottom = 37.5
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_0ocgh")
+expand_mode = 3
+
+[node name="ItemSlot" type="Panel" parent="Board Container/MarginContainer/Board/Row3/Board Tile12/TextureRect"]
+custom_minimum_size = Vector2(52, 52)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -25.0
+offset_top = -25.0
+offset_right = 25.0
+offset_bottom = 25.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("2_qg17u")
+
+[node name="TextureRect" type="TextureRect" parent="Board Container/MarginContainer/Board/Row3/Board Tile12/TextureRect/ItemSlot"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 3
+stretch_mode = 4
+
+[node name="Board Tile13" type="Panel" parent="Board Container/MarginContainer/Board/Row3"]
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="Board Container/MarginContainer/Board/Row3/Board Tile13"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -37.5
+offset_top = -37.5
+offset_right = 37.5
+offset_bottom = 37.5
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_0ocgh")
+expand_mode = 3
+
+[node name="ItemSlot" type="Panel" parent="Board Container/MarginContainer/Board/Row3/Board Tile13/TextureRect"]
+custom_minimum_size = Vector2(52, 52)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -25.0
+offset_top = -25.0
+offset_right = 25.0
+offset_bottom = 25.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("2_qg17u")
+
+[node name="TextureRect" type="TextureRect" parent="Board Container/MarginContainer/Board/Row3/Board Tile13/TextureRect/ItemSlot"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 3
+stretch_mode = 4
+
+[node name="Board Tile14" type="Panel" parent="Board Container/MarginContainer/Board/Row3"]
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="Board Container/MarginContainer/Board/Row3/Board Tile14"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -37.5
+offset_top = -37.5
+offset_right = 37.5
+offset_bottom = 37.5
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_0ocgh")
+expand_mode = 3
+
+[node name="ItemSlot" type="Panel" parent="Board Container/MarginContainer/Board/Row3/Board Tile14/TextureRect"]
+custom_minimum_size = Vector2(52, 52)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -25.0
+offset_top = -25.0
+offset_right = 25.0
+offset_bottom = 25.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("2_qg17u")
+
+[node name="TextureRect" type="TextureRect" parent="Board Container/MarginContainer/Board/Row3/Board Tile14/TextureRect/ItemSlot"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 3
+stretch_mode = 4
+
+[node name="Board Tile15" type="Panel" parent="Board Container/MarginContainer/Board/Row3"]
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="Board Container/MarginContainer/Board/Row3/Board Tile15"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -37.5
+offset_top = -37.5
+offset_right = 37.5
+offset_bottom = 37.5
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_0ocgh")
+expand_mode = 3
+
+[node name="ItemSlot" type="Panel" parent="Board Container/MarginContainer/Board/Row3/Board Tile15/TextureRect"]
+custom_minimum_size = Vector2(52, 52)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -25.0
+offset_top = -25.0
+offset_right = 25.0
+offset_bottom = 25.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("2_qg17u")
+
+[node name="TextureRect" type="TextureRect" parent="Board Container/MarginContainer/Board/Row3/Board Tile15/TextureRect/ItemSlot"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 3
+stretch_mode = 4
+
+[node name="Row4" type="GridContainer" parent="Board Container/MarginContainer/Board"]
+layout_mode = 2
+theme_override_constants/h_separation = 5
+theme_override_constants/v_separation = 5
+columns = 15
+
+[node name="Board Tile" type="Panel" parent="Board Container/MarginContainer/Board/Row4"]
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="Board Container/MarginContainer/Board/Row4/Board Tile"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -37.5
+offset_top = -37.5
+offset_right = 37.5
+offset_bottom = 37.5
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_0ocgh")
+expand_mode = 3
+
+[node name="ItemSlot" type="Panel" parent="Board Container/MarginContainer/Board/Row4/Board Tile/TextureRect"]
+custom_minimum_size = Vector2(52, 52)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -25.0
+offset_top = -25.0
+offset_right = 25.0
+offset_bottom = 25.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("2_qg17u")
+
+[node name="TextureRect" type="TextureRect" parent="Board Container/MarginContainer/Board/Row4/Board Tile/TextureRect/ItemSlot"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 3
+stretch_mode = 4
+
+[node name="Board Tile2" type="Panel" parent="Board Container/MarginContainer/Board/Row4"]
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="Board Container/MarginContainer/Board/Row4/Board Tile2"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -37.5
+offset_top = -37.5
+offset_right = 37.5
+offset_bottom = 37.5
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_0ocgh")
+expand_mode = 3
+
+[node name="ItemSlot" type="Panel" parent="Board Container/MarginContainer/Board/Row4/Board Tile2/TextureRect"]
+custom_minimum_size = Vector2(52, 52)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -25.0
+offset_top = -25.0
+offset_right = 25.0
+offset_bottom = 25.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("2_qg17u")
+
+[node name="TextureRect" type="TextureRect" parent="Board Container/MarginContainer/Board/Row4/Board Tile2/TextureRect/ItemSlot"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 3
+stretch_mode = 4
+
+[node name="Board Tile3" type="Panel" parent="Board Container/MarginContainer/Board/Row4"]
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="Board Container/MarginContainer/Board/Row4/Board Tile3"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -37.5
+offset_top = -37.5
+offset_right = 37.5
+offset_bottom = 37.5
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_0ocgh")
+expand_mode = 3
+
+[node name="ItemSlot" type="Panel" parent="Board Container/MarginContainer/Board/Row4/Board Tile3/TextureRect"]
+custom_minimum_size = Vector2(52, 52)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -25.0
+offset_top = -25.0
+offset_right = 25.0
+offset_bottom = 25.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("2_qg17u")
+
+[node name="TextureRect" type="TextureRect" parent="Board Container/MarginContainer/Board/Row4/Board Tile3/TextureRect/ItemSlot"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 3
+stretch_mode = 4
+
+[node name="Board Tile4" type="Panel" parent="Board Container/MarginContainer/Board/Row4"]
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="Board Container/MarginContainer/Board/Row4/Board Tile4"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -37.5
+offset_top = -37.5
+offset_right = 37.5
+offset_bottom = 37.5
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_0ocgh")
+expand_mode = 3
+
+[node name="ItemSlot" type="Panel" parent="Board Container/MarginContainer/Board/Row4/Board Tile4/TextureRect"]
+custom_minimum_size = Vector2(52, 52)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -25.0
+offset_top = -25.0
+offset_right = 25.0
+offset_bottom = 25.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("2_qg17u")
+
+[node name="TextureRect" type="TextureRect" parent="Board Container/MarginContainer/Board/Row4/Board Tile4/TextureRect/ItemSlot"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 3
+stretch_mode = 4
+
+[node name="Board Tile5" type="Panel" parent="Board Container/MarginContainer/Board/Row4"]
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="Board Container/MarginContainer/Board/Row4/Board Tile5"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -37.5
+offset_top = -37.5
+offset_right = 37.5
+offset_bottom = 37.5
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_0ocgh")
+expand_mode = 3
+
+[node name="ItemSlot" type="Panel" parent="Board Container/MarginContainer/Board/Row4/Board Tile5/TextureRect"]
+custom_minimum_size = Vector2(52, 52)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -25.0
+offset_top = -25.0
+offset_right = 25.0
+offset_bottom = 25.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("2_qg17u")
+
+[node name="TextureRect" type="TextureRect" parent="Board Container/MarginContainer/Board/Row4/Board Tile5/TextureRect/ItemSlot"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 3
+stretch_mode = 4
+
+[node name="Board Tile6" type="Panel" parent="Board Container/MarginContainer/Board/Row4"]
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="Board Container/MarginContainer/Board/Row4/Board Tile6"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -37.5
+offset_top = -37.5
+offset_right = 37.5
+offset_bottom = 37.5
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_0ocgh")
+expand_mode = 3
+
+[node name="ItemSlot" type="Panel" parent="Board Container/MarginContainer/Board/Row4/Board Tile6/TextureRect"]
+custom_minimum_size = Vector2(52, 52)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -25.0
+offset_top = -25.0
+offset_right = 25.0
+offset_bottom = 25.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("2_qg17u")
+
+[node name="TextureRect" type="TextureRect" parent="Board Container/MarginContainer/Board/Row4/Board Tile6/TextureRect/ItemSlot"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 3
+stretch_mode = 4
+
+[node name="Board Tile7" type="Panel" parent="Board Container/MarginContainer/Board/Row4"]
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="Board Container/MarginContainer/Board/Row4/Board Tile7"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -37.5
+offset_top = -37.5
+offset_right = 37.5
+offset_bottom = 37.5
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_0ocgh")
+expand_mode = 3
+
+[node name="ItemSlot" type="Panel" parent="Board Container/MarginContainer/Board/Row4/Board Tile7/TextureRect"]
+custom_minimum_size = Vector2(52, 52)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -25.0
+offset_top = -25.0
+offset_right = 25.0
+offset_bottom = 25.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("2_qg17u")
+
+[node name="TextureRect" type="TextureRect" parent="Board Container/MarginContainer/Board/Row4/Board Tile7/TextureRect/ItemSlot"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 3
+stretch_mode = 4
+
+[node name="Board Tile8" type="Panel" parent="Board Container/MarginContainer/Board/Row4"]
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="Board Container/MarginContainer/Board/Row4/Board Tile8"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -37.5
+offset_top = -37.5
+offset_right = 37.5
+offset_bottom = 37.5
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_0ocgh")
+expand_mode = 3
+
+[node name="ItemSlot" type="Panel" parent="Board Container/MarginContainer/Board/Row4/Board Tile8/TextureRect"]
+custom_minimum_size = Vector2(52, 52)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -25.0
+offset_top = -25.0
+offset_right = 25.0
+offset_bottom = 25.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("2_qg17u")
+
+[node name="TextureRect" type="TextureRect" parent="Board Container/MarginContainer/Board/Row4/Board Tile8/TextureRect/ItemSlot"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 3
+stretch_mode = 4
+
+[node name="Board Tile9" type="Panel" parent="Board Container/MarginContainer/Board/Row4"]
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="Board Container/MarginContainer/Board/Row4/Board Tile9"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -37.5
+offset_top = -37.5
+offset_right = 37.5
+offset_bottom = 37.5
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_0ocgh")
+expand_mode = 3
+
+[node name="ItemSlot" type="Panel" parent="Board Container/MarginContainer/Board/Row4/Board Tile9/TextureRect"]
+custom_minimum_size = Vector2(52, 52)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -25.0
+offset_top = -25.0
+offset_right = 25.0
+offset_bottom = 25.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("2_qg17u")
+
+[node name="TextureRect" type="TextureRect" parent="Board Container/MarginContainer/Board/Row4/Board Tile9/TextureRect/ItemSlot"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 3
+stretch_mode = 4
+
+[node name="Board Tile10" type="Panel" parent="Board Container/MarginContainer/Board/Row4"]
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="Board Container/MarginContainer/Board/Row4/Board Tile10"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -37.5
+offset_top = -37.5
+offset_right = 37.5
+offset_bottom = 37.5
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_0ocgh")
+expand_mode = 3
+
+[node name="ItemSlot" type="Panel" parent="Board Container/MarginContainer/Board/Row4/Board Tile10/TextureRect"]
+custom_minimum_size = Vector2(52, 52)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -25.0
+offset_top = -25.0
+offset_right = 25.0
+offset_bottom = 25.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("2_qg17u")
+
+[node name="TextureRect" type="TextureRect" parent="Board Container/MarginContainer/Board/Row4/Board Tile10/TextureRect/ItemSlot"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 3
+stretch_mode = 4
+
+[node name="Board Tile11" type="Panel" parent="Board Container/MarginContainer/Board/Row4"]
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="Board Container/MarginContainer/Board/Row4/Board Tile11"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -37.5
+offset_top = -37.5
+offset_right = 37.5
+offset_bottom = 37.5
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_0ocgh")
+expand_mode = 3
+
+[node name="ItemSlot" type="Panel" parent="Board Container/MarginContainer/Board/Row4/Board Tile11/TextureRect"]
+custom_minimum_size = Vector2(52, 52)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -25.0
+offset_top = -25.0
+offset_right = 25.0
+offset_bottom = 25.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("2_qg17u")
+
+[node name="TextureRect" type="TextureRect" parent="Board Container/MarginContainer/Board/Row4/Board Tile11/TextureRect/ItemSlot"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 3
+stretch_mode = 4
+
+[node name="Board Tile12" type="Panel" parent="Board Container/MarginContainer/Board/Row4"]
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="Board Container/MarginContainer/Board/Row4/Board Tile12"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -37.5
+offset_top = -37.5
+offset_right = 37.5
+offset_bottom = 37.5
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_0ocgh")
+expand_mode = 3
+
+[node name="ItemSlot" type="Panel" parent="Board Container/MarginContainer/Board/Row4/Board Tile12/TextureRect"]
+custom_minimum_size = Vector2(52, 52)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -25.0
+offset_top = -25.0
+offset_right = 25.0
+offset_bottom = 25.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("2_qg17u")
+
+[node name="TextureRect" type="TextureRect" parent="Board Container/MarginContainer/Board/Row4/Board Tile12/TextureRect/ItemSlot"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 3
+stretch_mode = 4
+
+[node name="Board Tile13" type="Panel" parent="Board Container/MarginContainer/Board/Row4"]
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="Board Container/MarginContainer/Board/Row4/Board Tile13"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -37.5
+offset_top = -37.5
+offset_right = 37.5
+offset_bottom = 37.5
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_0ocgh")
+expand_mode = 3
+
+[node name="ItemSlot" type="Panel" parent="Board Container/MarginContainer/Board/Row4/Board Tile13/TextureRect"]
+custom_minimum_size = Vector2(52, 52)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -25.0
+offset_top = -25.0
+offset_right = 25.0
+offset_bottom = 25.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("2_qg17u")
+
+[node name="TextureRect" type="TextureRect" parent="Board Container/MarginContainer/Board/Row4/Board Tile13/TextureRect/ItemSlot"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 3
+stretch_mode = 4
+
+[node name="Board Tile14" type="Panel" parent="Board Container/MarginContainer/Board/Row4"]
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="Board Container/MarginContainer/Board/Row4/Board Tile14"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -37.5
+offset_top = -37.5
+offset_right = 37.5
+offset_bottom = 37.5
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_0ocgh")
+expand_mode = 3
+
+[node name="ItemSlot" type="Panel" parent="Board Container/MarginContainer/Board/Row4/Board Tile14/TextureRect"]
+custom_minimum_size = Vector2(52, 52)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -25.0
+offset_top = -25.0
+offset_right = 25.0
+offset_bottom = 25.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("2_qg17u")
+
+[node name="TextureRect" type="TextureRect" parent="Board Container/MarginContainer/Board/Row4/Board Tile14/TextureRect/ItemSlot"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 3
+stretch_mode = 4
+
+[node name="Board Tile15" type="Panel" parent="Board Container/MarginContainer/Board/Row4"]
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="Board Container/MarginContainer/Board/Row4/Board Tile15"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -37.5
+offset_top = -37.5
+offset_right = 37.5
+offset_bottom = 37.5
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_0ocgh")
+expand_mode = 3
+
+[node name="ItemSlot" type="Panel" parent="Board Container/MarginContainer/Board/Row4/Board Tile15/TextureRect"]
+custom_minimum_size = Vector2(52, 52)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -25.0
+offset_top = -25.0
+offset_right = 25.0
+offset_bottom = 25.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("2_qg17u")
+
+[node name="TextureRect" type="TextureRect" parent="Board Container/MarginContainer/Board/Row4/Board Tile15/TextureRect/ItemSlot"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 3
+stretch_mode = 4
+
+[node name="Row5" type="GridContainer" parent="Board Container/MarginContainer/Board"]
+layout_mode = 2
+theme_override_constants/h_separation = 5
+theme_override_constants/v_separation = 5
+columns = 15
+
+[node name="Board Tile" type="Panel" parent="Board Container/MarginContainer/Board/Row5"]
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="Board Container/MarginContainer/Board/Row5/Board Tile"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -37.5
+offset_top = -37.5
+offset_right = 37.5
+offset_bottom = 37.5
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_0ocgh")
+expand_mode = 3
+
+[node name="ItemSlot" type="Panel" parent="Board Container/MarginContainer/Board/Row5/Board Tile/TextureRect"]
+custom_minimum_size = Vector2(52, 52)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -25.0
+offset_top = -25.0
+offset_right = 25.0
+offset_bottom = 25.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("2_qg17u")
+
+[node name="TextureRect" type="TextureRect" parent="Board Container/MarginContainer/Board/Row5/Board Tile/TextureRect/ItemSlot"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 3
+stretch_mode = 4
+
+[node name="Board Tile2" type="Panel" parent="Board Container/MarginContainer/Board/Row5"]
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="Board Container/MarginContainer/Board/Row5/Board Tile2"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -37.5
+offset_top = -37.5
+offset_right = 37.5
+offset_bottom = 37.5
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_0ocgh")
+expand_mode = 3
+
+[node name="ItemSlot" type="Panel" parent="Board Container/MarginContainer/Board/Row5/Board Tile2/TextureRect"]
+custom_minimum_size = Vector2(52, 52)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -25.0
+offset_top = -25.0
+offset_right = 25.0
+offset_bottom = 25.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("2_qg17u")
+
+[node name="TextureRect" type="TextureRect" parent="Board Container/MarginContainer/Board/Row5/Board Tile2/TextureRect/ItemSlot"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 3
+stretch_mode = 4
+
+[node name="Board Tile3" type="Panel" parent="Board Container/MarginContainer/Board/Row5"]
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="Board Container/MarginContainer/Board/Row5/Board Tile3"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -37.5
+offset_top = -37.5
+offset_right = 37.5
+offset_bottom = 37.5
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_0ocgh")
+expand_mode = 3
+
+[node name="ItemSlot" type="Panel" parent="Board Container/MarginContainer/Board/Row5/Board Tile3/TextureRect"]
+custom_minimum_size = Vector2(52, 52)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -25.0
+offset_top = -25.0
+offset_right = 25.0
+offset_bottom = 25.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("2_qg17u")
+
+[node name="TextureRect" type="TextureRect" parent="Board Container/MarginContainer/Board/Row5/Board Tile3/TextureRect/ItemSlot"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 3
+stretch_mode = 4
+
+[node name="Board Tile4" type="Panel" parent="Board Container/MarginContainer/Board/Row5"]
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="Board Container/MarginContainer/Board/Row5/Board Tile4"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -37.5
+offset_top = -37.5
+offset_right = 37.5
+offset_bottom = 37.5
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_0ocgh")
+expand_mode = 3
+
+[node name="ItemSlot" type="Panel" parent="Board Container/MarginContainer/Board/Row5/Board Tile4/TextureRect"]
+custom_minimum_size = Vector2(52, 52)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -25.0
+offset_top = -25.0
+offset_right = 25.0
+offset_bottom = 25.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("2_qg17u")
+
+[node name="TextureRect" type="TextureRect" parent="Board Container/MarginContainer/Board/Row5/Board Tile4/TextureRect/ItemSlot"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 3
+stretch_mode = 4
+
+[node name="Board Tile5" type="Panel" parent="Board Container/MarginContainer/Board/Row5"]
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="Board Container/MarginContainer/Board/Row5/Board Tile5"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -37.5
+offset_top = -37.5
+offset_right = 37.5
+offset_bottom = 37.5
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_0ocgh")
+expand_mode = 3
+
+[node name="ItemSlot" type="Panel" parent="Board Container/MarginContainer/Board/Row5/Board Tile5/TextureRect"]
+custom_minimum_size = Vector2(52, 52)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -25.0
+offset_top = -25.0
+offset_right = 25.0
+offset_bottom = 25.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("2_qg17u")
+
+[node name="TextureRect" type="TextureRect" parent="Board Container/MarginContainer/Board/Row5/Board Tile5/TextureRect/ItemSlot"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 3
+stretch_mode = 4
+
+[node name="Board Tile6" type="Panel" parent="Board Container/MarginContainer/Board/Row5"]
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="Board Container/MarginContainer/Board/Row5/Board Tile6"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -37.5
+offset_top = -37.5
+offset_right = 37.5
+offset_bottom = 37.5
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_0ocgh")
+expand_mode = 3
+
+[node name="ItemSlot" type="Panel" parent="Board Container/MarginContainer/Board/Row5/Board Tile6/TextureRect"]
+custom_minimum_size = Vector2(52, 52)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -25.0
+offset_top = -25.0
+offset_right = 25.0
+offset_bottom = 25.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("2_qg17u")
+
+[node name="TextureRect" type="TextureRect" parent="Board Container/MarginContainer/Board/Row5/Board Tile6/TextureRect/ItemSlot"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 3
+stretch_mode = 4
+
+[node name="Board Tile7" type="Panel" parent="Board Container/MarginContainer/Board/Row5"]
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="Board Container/MarginContainer/Board/Row5/Board Tile7"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -37.5
+offset_top = -37.5
+offset_right = 37.5
+offset_bottom = 37.5
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_0ocgh")
+expand_mode = 3
+
+[node name="ItemSlot" type="Panel" parent="Board Container/MarginContainer/Board/Row5/Board Tile7/TextureRect"]
+custom_minimum_size = Vector2(52, 52)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -25.0
+offset_top = -25.0
+offset_right = 25.0
+offset_bottom = 25.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("2_qg17u")
+
+[node name="TextureRect" type="TextureRect" parent="Board Container/MarginContainer/Board/Row5/Board Tile7/TextureRect/ItemSlot"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 3
+stretch_mode = 4
+
+[node name="Board Tile8" type="Panel" parent="Board Container/MarginContainer/Board/Row5"]
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="Board Container/MarginContainer/Board/Row5/Board Tile8"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -37.5
+offset_top = -37.5
+offset_right = 37.5
+offset_bottom = 37.5
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_0ocgh")
+expand_mode = 3
+
+[node name="ItemSlot" type="Panel" parent="Board Container/MarginContainer/Board/Row5/Board Tile8/TextureRect"]
+custom_minimum_size = Vector2(52, 52)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -25.0
+offset_top = -25.0
+offset_right = 25.0
+offset_bottom = 25.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("2_qg17u")
+
+[node name="TextureRect" type="TextureRect" parent="Board Container/MarginContainer/Board/Row5/Board Tile8/TextureRect/ItemSlot"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 3
+stretch_mode = 4
+
+[node name="Board Tile9" type="Panel" parent="Board Container/MarginContainer/Board/Row5"]
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="Board Container/MarginContainer/Board/Row5/Board Tile9"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -37.5
+offset_top = -37.5
+offset_right = 37.5
+offset_bottom = 37.5
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_0ocgh")
+expand_mode = 3
+
+[node name="ItemSlot" type="Panel" parent="Board Container/MarginContainer/Board/Row5/Board Tile9/TextureRect"]
+custom_minimum_size = Vector2(52, 52)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -25.0
+offset_top = -25.0
+offset_right = 25.0
+offset_bottom = 25.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("2_qg17u")
+
+[node name="TextureRect" type="TextureRect" parent="Board Container/MarginContainer/Board/Row5/Board Tile9/TextureRect/ItemSlot"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 3
+stretch_mode = 4
+
+[node name="Board Tile10" type="Panel" parent="Board Container/MarginContainer/Board/Row5"]
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="Board Container/MarginContainer/Board/Row5/Board Tile10"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -37.5
+offset_top = -37.5
+offset_right = 37.5
+offset_bottom = 37.5
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_0ocgh")
+expand_mode = 3
+
+[node name="ItemSlot" type="Panel" parent="Board Container/MarginContainer/Board/Row5/Board Tile10/TextureRect"]
+custom_minimum_size = Vector2(52, 52)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -25.0
+offset_top = -25.0
+offset_right = 25.0
+offset_bottom = 25.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("2_qg17u")
+
+[node name="TextureRect" type="TextureRect" parent="Board Container/MarginContainer/Board/Row5/Board Tile10/TextureRect/ItemSlot"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 3
+stretch_mode = 4
+
+[node name="Board Tile11" type="Panel" parent="Board Container/MarginContainer/Board/Row5"]
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="Board Container/MarginContainer/Board/Row5/Board Tile11"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -37.5
+offset_top = -37.5
+offset_right = 37.5
+offset_bottom = 37.5
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_0ocgh")
+expand_mode = 3
+
+[node name="ItemSlot" type="Panel" parent="Board Container/MarginContainer/Board/Row5/Board Tile11/TextureRect"]
+custom_minimum_size = Vector2(52, 52)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -25.0
+offset_top = -25.0
+offset_right = 25.0
+offset_bottom = 25.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("2_qg17u")
+
+[node name="TextureRect" type="TextureRect" parent="Board Container/MarginContainer/Board/Row5/Board Tile11/TextureRect/ItemSlot"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 3
+stretch_mode = 4
+
+[node name="Board Tile12" type="Panel" parent="Board Container/MarginContainer/Board/Row5"]
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="Board Container/MarginContainer/Board/Row5/Board Tile12"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -37.5
+offset_top = -37.5
+offset_right = 37.5
+offset_bottom = 37.5
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_0ocgh")
+expand_mode = 3
+
+[node name="ItemSlot" type="Panel" parent="Board Container/MarginContainer/Board/Row5/Board Tile12/TextureRect"]
+custom_minimum_size = Vector2(52, 52)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -25.0
+offset_top = -25.0
+offset_right = 25.0
+offset_bottom = 25.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("2_qg17u")
+
+[node name="TextureRect" type="TextureRect" parent="Board Container/MarginContainer/Board/Row5/Board Tile12/TextureRect/ItemSlot"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 3
+stretch_mode = 4
+
+[node name="Board Tile13" type="Panel" parent="Board Container/MarginContainer/Board/Row5"]
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="Board Container/MarginContainer/Board/Row5/Board Tile13"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -37.5
+offset_top = -37.5
+offset_right = 37.5
+offset_bottom = 37.5
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_0ocgh")
+expand_mode = 3
+
+[node name="ItemSlot" type="Panel" parent="Board Container/MarginContainer/Board/Row5/Board Tile13/TextureRect"]
+custom_minimum_size = Vector2(52, 52)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -25.0
+offset_top = -25.0
+offset_right = 25.0
+offset_bottom = 25.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("2_qg17u")
+
+[node name="TextureRect" type="TextureRect" parent="Board Container/MarginContainer/Board/Row5/Board Tile13/TextureRect/ItemSlot"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 3
+stretch_mode = 4
+
+[node name="Board Tile14" type="Panel" parent="Board Container/MarginContainer/Board/Row5"]
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="Board Container/MarginContainer/Board/Row5/Board Tile14"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -37.5
+offset_top = -37.5
+offset_right = 37.5
+offset_bottom = 37.5
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_0ocgh")
+expand_mode = 3
+
+[node name="ItemSlot" type="Panel" parent="Board Container/MarginContainer/Board/Row5/Board Tile14/TextureRect"]
+custom_minimum_size = Vector2(52, 52)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -25.0
+offset_top = -25.0
+offset_right = 25.0
+offset_bottom = 25.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("2_qg17u")
+
+[node name="TextureRect" type="TextureRect" parent="Board Container/MarginContainer/Board/Row5/Board Tile14/TextureRect/ItemSlot"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 3
+stretch_mode = 4
+
+[node name="Board Tile15" type="Panel" parent="Board Container/MarginContainer/Board/Row5"]
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="Board Container/MarginContainer/Board/Row5/Board Tile15"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -37.5
+offset_top = -37.5
+offset_right = 37.5
+offset_bottom = 37.5
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_0ocgh")
+expand_mode = 3
+
+[node name="ItemSlot" type="Panel" parent="Board Container/MarginContainer/Board/Row5/Board Tile15/TextureRect"]
+custom_minimum_size = Vector2(52, 52)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -25.0
+offset_top = -25.0
+offset_right = 25.0
+offset_bottom = 25.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("2_qg17u")
+
+[node name="TextureRect" type="TextureRect" parent="Board Container/MarginContainer/Board/Row5/Board Tile15/TextureRect/ItemSlot"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 3
+stretch_mode = 4
+
+[node name="Row6" type="GridContainer" parent="Board Container/MarginContainer/Board"]
+layout_mode = 2
+theme_override_constants/h_separation = 5
+theme_override_constants/v_separation = 5
+columns = 15
+
+[node name="Board Tile" type="Panel" parent="Board Container/MarginContainer/Board/Row6"]
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="Board Container/MarginContainer/Board/Row6/Board Tile"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -37.5
+offset_top = -37.5
+offset_right = 37.5
+offset_bottom = 37.5
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_0ocgh")
+expand_mode = 3
+
+[node name="ItemSlot" type="Panel" parent="Board Container/MarginContainer/Board/Row6/Board Tile/TextureRect"]
+custom_minimum_size = Vector2(52, 52)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -25.0
+offset_top = -25.0
+offset_right = 25.0
+offset_bottom = 25.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("2_qg17u")
+
+[node name="TextureRect" type="TextureRect" parent="Board Container/MarginContainer/Board/Row6/Board Tile/TextureRect/ItemSlot"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 3
+stretch_mode = 4
+
+[node name="Board Tile2" type="Panel" parent="Board Container/MarginContainer/Board/Row6"]
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="Board Container/MarginContainer/Board/Row6/Board Tile2"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -37.5
+offset_top = -37.5
+offset_right = 37.5
+offset_bottom = 37.5
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_0ocgh")
+expand_mode = 3
+
+[node name="ItemSlot" type="Panel" parent="Board Container/MarginContainer/Board/Row6/Board Tile2/TextureRect"]
+custom_minimum_size = Vector2(52, 52)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -25.0
+offset_top = -25.0
+offset_right = 25.0
+offset_bottom = 25.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("2_qg17u")
+
+[node name="TextureRect" type="TextureRect" parent="Board Container/MarginContainer/Board/Row6/Board Tile2/TextureRect/ItemSlot"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 3
+stretch_mode = 4
+
+[node name="Board Tile3" type="Panel" parent="Board Container/MarginContainer/Board/Row6"]
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="Board Container/MarginContainer/Board/Row6/Board Tile3"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -37.5
+offset_top = -37.5
+offset_right = 37.5
+offset_bottom = 37.5
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_0ocgh")
+expand_mode = 3
+
+[node name="ItemSlot" type="Panel" parent="Board Container/MarginContainer/Board/Row6/Board Tile3/TextureRect"]
+custom_minimum_size = Vector2(52, 52)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -25.0
+offset_top = -25.0
+offset_right = 25.0
+offset_bottom = 25.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("2_qg17u")
+
+[node name="TextureRect" type="TextureRect" parent="Board Container/MarginContainer/Board/Row6/Board Tile3/TextureRect/ItemSlot"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 3
+stretch_mode = 4
+
+[node name="Board Tile4" type="Panel" parent="Board Container/MarginContainer/Board/Row6"]
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="Board Container/MarginContainer/Board/Row6/Board Tile4"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -37.5
+offset_top = -37.5
+offset_right = 37.5
+offset_bottom = 37.5
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_0ocgh")
+expand_mode = 3
+
+[node name="ItemSlot" type="Panel" parent="Board Container/MarginContainer/Board/Row6/Board Tile4/TextureRect"]
+custom_minimum_size = Vector2(52, 52)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -25.0
+offset_top = -25.0
+offset_right = 25.0
+offset_bottom = 25.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("2_qg17u")
+
+[node name="TextureRect" type="TextureRect" parent="Board Container/MarginContainer/Board/Row6/Board Tile4/TextureRect/ItemSlot"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 3
+stretch_mode = 4
+
+[node name="Board Tile5" type="Panel" parent="Board Container/MarginContainer/Board/Row6"]
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="Board Container/MarginContainer/Board/Row6/Board Tile5"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -37.5
+offset_top = -37.5
+offset_right = 37.5
+offset_bottom = 37.5
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_0ocgh")
+expand_mode = 3
+
+[node name="ItemSlot" type="Panel" parent="Board Container/MarginContainer/Board/Row6/Board Tile5/TextureRect"]
+custom_minimum_size = Vector2(52, 52)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -25.0
+offset_top = -25.0
+offset_right = 25.0
+offset_bottom = 25.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("2_qg17u")
+
+[node name="TextureRect" type="TextureRect" parent="Board Container/MarginContainer/Board/Row6/Board Tile5/TextureRect/ItemSlot"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 3
+stretch_mode = 4
+
+[node name="Board Tile6" type="Panel" parent="Board Container/MarginContainer/Board/Row6"]
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="Board Container/MarginContainer/Board/Row6/Board Tile6"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -37.5
+offset_top = -37.5
+offset_right = 37.5
+offset_bottom = 37.5
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_0ocgh")
+expand_mode = 3
+
+[node name="ItemSlot" type="Panel" parent="Board Container/MarginContainer/Board/Row6/Board Tile6/TextureRect"]
+custom_minimum_size = Vector2(52, 52)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -25.0
+offset_top = -25.0
+offset_right = 25.0
+offset_bottom = 25.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("2_qg17u")
+
+[node name="TextureRect" type="TextureRect" parent="Board Container/MarginContainer/Board/Row6/Board Tile6/TextureRect/ItemSlot"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 3
+stretch_mode = 4
+
+[node name="Board Tile7" type="Panel" parent="Board Container/MarginContainer/Board/Row6"]
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="Board Container/MarginContainer/Board/Row6/Board Tile7"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -37.5
+offset_top = -37.5
+offset_right = 37.5
+offset_bottom = 37.5
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_0ocgh")
+expand_mode = 3
+
+[node name="ItemSlot" type="Panel" parent="Board Container/MarginContainer/Board/Row6/Board Tile7/TextureRect"]
+custom_minimum_size = Vector2(52, 52)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -25.0
+offset_top = -25.0
+offset_right = 25.0
+offset_bottom = 25.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("2_qg17u")
+
+[node name="TextureRect" type="TextureRect" parent="Board Container/MarginContainer/Board/Row6/Board Tile7/TextureRect/ItemSlot"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 3
+stretch_mode = 4
+
+[node name="Board Tile8" type="Panel" parent="Board Container/MarginContainer/Board/Row6"]
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="Board Container/MarginContainer/Board/Row6/Board Tile8"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -37.5
+offset_top = -37.5
+offset_right = 37.5
+offset_bottom = 37.5
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_0ocgh")
+expand_mode = 3
+
+[node name="ItemSlot" type="Panel" parent="Board Container/MarginContainer/Board/Row6/Board Tile8/TextureRect"]
+custom_minimum_size = Vector2(52, 52)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -25.0
+offset_top = -25.0
+offset_right = 25.0
+offset_bottom = 25.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("2_qg17u")
+
+[node name="TextureRect" type="TextureRect" parent="Board Container/MarginContainer/Board/Row6/Board Tile8/TextureRect/ItemSlot"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 3
+stretch_mode = 4
+
+[node name="Board Tile9" type="Panel" parent="Board Container/MarginContainer/Board/Row6"]
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="Board Container/MarginContainer/Board/Row6/Board Tile9"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -37.5
+offset_top = -37.5
+offset_right = 37.5
+offset_bottom = 37.5
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_0ocgh")
+expand_mode = 3
+
+[node name="ItemSlot" type="Panel" parent="Board Container/MarginContainer/Board/Row6/Board Tile9/TextureRect"]
+custom_minimum_size = Vector2(52, 52)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -25.0
+offset_top = -25.0
+offset_right = 25.0
+offset_bottom = 25.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("2_qg17u")
+
+[node name="TextureRect" type="TextureRect" parent="Board Container/MarginContainer/Board/Row6/Board Tile9/TextureRect/ItemSlot"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 3
+stretch_mode = 4
+
+[node name="Board Tile10" type="Panel" parent="Board Container/MarginContainer/Board/Row6"]
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="Board Container/MarginContainer/Board/Row6/Board Tile10"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -37.5
+offset_top = -37.5
+offset_right = 37.5
+offset_bottom = 37.5
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_0ocgh")
+expand_mode = 3
+
+[node name="ItemSlot" type="Panel" parent="Board Container/MarginContainer/Board/Row6/Board Tile10/TextureRect"]
+custom_minimum_size = Vector2(52, 52)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -25.0
+offset_top = -25.0
+offset_right = 25.0
+offset_bottom = 25.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("2_qg17u")
+
+[node name="TextureRect" type="TextureRect" parent="Board Container/MarginContainer/Board/Row6/Board Tile10/TextureRect/ItemSlot"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 3
+stretch_mode = 4
+
+[node name="Board Tile11" type="Panel" parent="Board Container/MarginContainer/Board/Row6"]
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="Board Container/MarginContainer/Board/Row6/Board Tile11"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -37.5
+offset_top = -37.5
+offset_right = 37.5
+offset_bottom = 37.5
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_0ocgh")
+expand_mode = 3
+
+[node name="ItemSlot" type="Panel" parent="Board Container/MarginContainer/Board/Row6/Board Tile11/TextureRect"]
+custom_minimum_size = Vector2(52, 52)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -25.0
+offset_top = -25.0
+offset_right = 25.0
+offset_bottom = 25.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("2_qg17u")
+
+[node name="TextureRect" type="TextureRect" parent="Board Container/MarginContainer/Board/Row6/Board Tile11/TextureRect/ItemSlot"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 3
+stretch_mode = 4
+
+[node name="Board Tile12" type="Panel" parent="Board Container/MarginContainer/Board/Row6"]
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="Board Container/MarginContainer/Board/Row6/Board Tile12"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -37.5
+offset_top = -37.5
+offset_right = 37.5
+offset_bottom = 37.5
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_0ocgh")
+expand_mode = 3
+
+[node name="ItemSlot" type="Panel" parent="Board Container/MarginContainer/Board/Row6/Board Tile12/TextureRect"]
+custom_minimum_size = Vector2(52, 52)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -25.0
+offset_top = -25.0
+offset_right = 25.0
+offset_bottom = 25.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("2_qg17u")
+
+[node name="TextureRect" type="TextureRect" parent="Board Container/MarginContainer/Board/Row6/Board Tile12/TextureRect/ItemSlot"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 3
+stretch_mode = 4
+
+[node name="Board Tile13" type="Panel" parent="Board Container/MarginContainer/Board/Row6"]
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="Board Container/MarginContainer/Board/Row6/Board Tile13"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -37.5
+offset_top = -37.5
+offset_right = 37.5
+offset_bottom = 37.5
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_0ocgh")
+expand_mode = 3
+
+[node name="ItemSlot" type="Panel" parent="Board Container/MarginContainer/Board/Row6/Board Tile13/TextureRect"]
+custom_minimum_size = Vector2(52, 52)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -25.0
+offset_top = -25.0
+offset_right = 25.0
+offset_bottom = 25.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("2_qg17u")
+
+[node name="TextureRect" type="TextureRect" parent="Board Container/MarginContainer/Board/Row6/Board Tile13/TextureRect/ItemSlot"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 3
+stretch_mode = 4
+
+[node name="Board Tile14" type="Panel" parent="Board Container/MarginContainer/Board/Row6"]
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="Board Container/MarginContainer/Board/Row6/Board Tile14"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -37.5
+offset_top = -37.5
+offset_right = 37.5
+offset_bottom = 37.5
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_0ocgh")
+expand_mode = 3
+
+[node name="ItemSlot" type="Panel" parent="Board Container/MarginContainer/Board/Row6/Board Tile14/TextureRect"]
+custom_minimum_size = Vector2(52, 52)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -25.0
+offset_top = -25.0
+offset_right = 25.0
+offset_bottom = 25.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("2_qg17u")
+
+[node name="TextureRect" type="TextureRect" parent="Board Container/MarginContainer/Board/Row6/Board Tile14/TextureRect/ItemSlot"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 3
+stretch_mode = 4
+
+[node name="Board Tile15" type="Panel" parent="Board Container/MarginContainer/Board/Row6"]
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="Board Container/MarginContainer/Board/Row6/Board Tile15"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -37.5
+offset_top = -37.5
+offset_right = 37.5
+offset_bottom = 37.5
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_0ocgh")
+expand_mode = 3
+
+[node name="ItemSlot" type="Panel" parent="Board Container/MarginContainer/Board/Row6/Board Tile15/TextureRect"]
+custom_minimum_size = Vector2(52, 52)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -25.0
+offset_top = -25.0
+offset_right = 25.0
+offset_bottom = 25.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("2_qg17u")
+
+[node name="TextureRect" type="TextureRect" parent="Board Container/MarginContainer/Board/Row6/Board Tile15/TextureRect/ItemSlot"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 3
+stretch_mode = 4
+
+[node name="Row7" type="GridContainer" parent="Board Container/MarginContainer/Board"]
+layout_mode = 2
+theme_override_constants/h_separation = 5
+theme_override_constants/v_separation = 5
+columns = 15
+
+[node name="Board Tile" type="Panel" parent="Board Container/MarginContainer/Board/Row7"]
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="Board Container/MarginContainer/Board/Row7/Board Tile"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -37.5
+offset_top = -37.5
+offset_right = 37.5
+offset_bottom = 37.5
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_0ocgh")
+expand_mode = 3
+
+[node name="ItemSlot" type="Panel" parent="Board Container/MarginContainer/Board/Row7/Board Tile/TextureRect"]
+custom_minimum_size = Vector2(52, 52)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -25.0
+offset_top = -25.0
+offset_right = 25.0
+offset_bottom = 25.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("2_qg17u")
+
+[node name="TextureRect" type="TextureRect" parent="Board Container/MarginContainer/Board/Row7/Board Tile/TextureRect/ItemSlot"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 3
+stretch_mode = 4
+
+[node name="Board Tile2" type="Panel" parent="Board Container/MarginContainer/Board/Row7"]
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="Board Container/MarginContainer/Board/Row7/Board Tile2"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -37.5
+offset_top = -37.5
+offset_right = 37.5
+offset_bottom = 37.5
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_0ocgh")
+expand_mode = 3
+
+[node name="ItemSlot" type="Panel" parent="Board Container/MarginContainer/Board/Row7/Board Tile2/TextureRect"]
+custom_minimum_size = Vector2(52, 52)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -25.0
+offset_top = -25.0
+offset_right = 25.0
+offset_bottom = 25.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("2_qg17u")
+
+[node name="TextureRect" type="TextureRect" parent="Board Container/MarginContainer/Board/Row7/Board Tile2/TextureRect/ItemSlot"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 3
+stretch_mode = 4
+
+[node name="Board Tile3" type="Panel" parent="Board Container/MarginContainer/Board/Row7"]
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="Board Container/MarginContainer/Board/Row7/Board Tile3"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -37.5
+offset_top = -37.5
+offset_right = 37.5
+offset_bottom = 37.5
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_0ocgh")
+expand_mode = 3
+
+[node name="ItemSlot" type="Panel" parent="Board Container/MarginContainer/Board/Row7/Board Tile3/TextureRect"]
+custom_minimum_size = Vector2(52, 52)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -25.0
+offset_top = -25.0
+offset_right = 25.0
+offset_bottom = 25.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("2_qg17u")
+
+[node name="TextureRect" type="TextureRect" parent="Board Container/MarginContainer/Board/Row7/Board Tile3/TextureRect/ItemSlot"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 3
+stretch_mode = 4
+
+[node name="Board Tile4" type="Panel" parent="Board Container/MarginContainer/Board/Row7"]
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="Board Container/MarginContainer/Board/Row7/Board Tile4"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -37.5
+offset_top = -37.5
+offset_right = 37.5
+offset_bottom = 37.5
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_0ocgh")
+expand_mode = 3
+
+[node name="ItemSlot" type="Panel" parent="Board Container/MarginContainer/Board/Row7/Board Tile4/TextureRect"]
+custom_minimum_size = Vector2(52, 52)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -25.0
+offset_top = -25.0
+offset_right = 25.0
+offset_bottom = 25.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("2_qg17u")
+
+[node name="TextureRect" type="TextureRect" parent="Board Container/MarginContainer/Board/Row7/Board Tile4/TextureRect/ItemSlot"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 3
+stretch_mode = 4
+
+[node name="Board Tile5" type="Panel" parent="Board Container/MarginContainer/Board/Row7"]
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="Board Container/MarginContainer/Board/Row7/Board Tile5"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -37.5
+offset_top = -37.5
+offset_right = 37.5
+offset_bottom = 37.5
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_0ocgh")
+expand_mode = 3
+
+[node name="ItemSlot" type="Panel" parent="Board Container/MarginContainer/Board/Row7/Board Tile5/TextureRect"]
+custom_minimum_size = Vector2(52, 52)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -25.0
+offset_top = -25.0
+offset_right = 25.0
+offset_bottom = 25.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("2_qg17u")
+
+[node name="TextureRect" type="TextureRect" parent="Board Container/MarginContainer/Board/Row7/Board Tile5/TextureRect/ItemSlot"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 3
+stretch_mode = 4
+
+[node name="Board Tile6" type="Panel" parent="Board Container/MarginContainer/Board/Row7"]
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="Board Container/MarginContainer/Board/Row7/Board Tile6"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -37.5
+offset_top = -37.5
+offset_right = 37.5
+offset_bottom = 37.5
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_0ocgh")
+expand_mode = 3
+
+[node name="ItemSlot" type="Panel" parent="Board Container/MarginContainer/Board/Row7/Board Tile6/TextureRect"]
+custom_minimum_size = Vector2(52, 52)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -25.0
+offset_top = -25.0
+offset_right = 25.0
+offset_bottom = 25.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("2_qg17u")
+
+[node name="TextureRect" type="TextureRect" parent="Board Container/MarginContainer/Board/Row7/Board Tile6/TextureRect/ItemSlot"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 3
+stretch_mode = 4
+
+[node name="Board Tile7" type="Panel" parent="Board Container/MarginContainer/Board/Row7"]
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="Board Container/MarginContainer/Board/Row7/Board Tile7"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -37.5
+offset_top = -37.5
+offset_right = 37.5
+offset_bottom = 37.5
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_0ocgh")
+expand_mode = 3
+
+[node name="ItemSlot" type="Panel" parent="Board Container/MarginContainer/Board/Row7/Board Tile7/TextureRect"]
+custom_minimum_size = Vector2(52, 52)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -25.0
+offset_top = -25.0
+offset_right = 25.0
+offset_bottom = 25.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("2_qg17u")
+
+[node name="TextureRect" type="TextureRect" parent="Board Container/MarginContainer/Board/Row7/Board Tile7/TextureRect/ItemSlot"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 3
+stretch_mode = 4
+
+[node name="Board Tile8" type="Panel" parent="Board Container/MarginContainer/Board/Row7"]
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="Board Container/MarginContainer/Board/Row7/Board Tile8"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -37.5
+offset_top = -37.5
+offset_right = 37.5
+offset_bottom = 37.5
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_0ocgh")
+expand_mode = 3
+
+[node name="ItemSlot" type="Panel" parent="Board Container/MarginContainer/Board/Row7/Board Tile8/TextureRect"]
+custom_minimum_size = Vector2(52, 52)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -25.0
+offset_top = -25.0
+offset_right = 25.0
+offset_bottom = 25.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("2_qg17u")
+
+[node name="TextureRect" type="TextureRect" parent="Board Container/MarginContainer/Board/Row7/Board Tile8/TextureRect/ItemSlot"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 3
+stretch_mode = 4
+
+[node name="Board Tile9" type="Panel" parent="Board Container/MarginContainer/Board/Row7"]
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="Board Container/MarginContainer/Board/Row7/Board Tile9"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -37.5
+offset_top = -37.5
+offset_right = 37.5
+offset_bottom = 37.5
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_0ocgh")
+expand_mode = 3
+
+[node name="ItemSlot" type="Panel" parent="Board Container/MarginContainer/Board/Row7/Board Tile9/TextureRect"]
+custom_minimum_size = Vector2(52, 52)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -25.0
+offset_top = -25.0
+offset_right = 25.0
+offset_bottom = 25.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("2_qg17u")
+
+[node name="TextureRect" type="TextureRect" parent="Board Container/MarginContainer/Board/Row7/Board Tile9/TextureRect/ItemSlot"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 3
+stretch_mode = 4
+
+[node name="Board Tile10" type="Panel" parent="Board Container/MarginContainer/Board/Row7"]
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="Board Container/MarginContainer/Board/Row7/Board Tile10"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -37.5
+offset_top = -37.5
+offset_right = 37.5
+offset_bottom = 37.5
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_0ocgh")
+expand_mode = 3
+
+[node name="ItemSlot" type="Panel" parent="Board Container/MarginContainer/Board/Row7/Board Tile10/TextureRect"]
+custom_minimum_size = Vector2(52, 52)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -25.0
+offset_top = -25.0
+offset_right = 25.0
+offset_bottom = 25.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("2_qg17u")
+
+[node name="TextureRect" type="TextureRect" parent="Board Container/MarginContainer/Board/Row7/Board Tile10/TextureRect/ItemSlot"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 3
+stretch_mode = 4
+
+[node name="Board Tile11" type="Panel" parent="Board Container/MarginContainer/Board/Row7"]
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="Board Container/MarginContainer/Board/Row7/Board Tile11"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -37.5
+offset_top = -37.5
+offset_right = 37.5
+offset_bottom = 37.5
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_0ocgh")
+expand_mode = 3
+
+[node name="ItemSlot" type="Panel" parent="Board Container/MarginContainer/Board/Row7/Board Tile11/TextureRect"]
+custom_minimum_size = Vector2(52, 52)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -25.0
+offset_top = -25.0
+offset_right = 25.0
+offset_bottom = 25.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("2_qg17u")
+
+[node name="TextureRect" type="TextureRect" parent="Board Container/MarginContainer/Board/Row7/Board Tile11/TextureRect/ItemSlot"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 3
+stretch_mode = 4
+
+[node name="Board Tile12" type="Panel" parent="Board Container/MarginContainer/Board/Row7"]
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="Board Container/MarginContainer/Board/Row7/Board Tile12"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -37.5
+offset_top = -37.5
+offset_right = 37.5
+offset_bottom = 37.5
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_0ocgh")
+expand_mode = 3
+
+[node name="ItemSlot" type="Panel" parent="Board Container/MarginContainer/Board/Row7/Board Tile12/TextureRect"]
+custom_minimum_size = Vector2(52, 52)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -25.0
+offset_top = -25.0
+offset_right = 25.0
+offset_bottom = 25.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("2_qg17u")
+
+[node name="TextureRect" type="TextureRect" parent="Board Container/MarginContainer/Board/Row7/Board Tile12/TextureRect/ItemSlot"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 3
+stretch_mode = 4
+
+[node name="Board Tile13" type="Panel" parent="Board Container/MarginContainer/Board/Row7"]
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="Board Container/MarginContainer/Board/Row7/Board Tile13"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -37.5
+offset_top = -37.5
+offset_right = 37.5
+offset_bottom = 37.5
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_0ocgh")
+expand_mode = 3
+
+[node name="ItemSlot" type="Panel" parent="Board Container/MarginContainer/Board/Row7/Board Tile13/TextureRect"]
+custom_minimum_size = Vector2(52, 52)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -25.0
+offset_top = -25.0
+offset_right = 25.0
+offset_bottom = 25.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("2_qg17u")
+
+[node name="TextureRect" type="TextureRect" parent="Board Container/MarginContainer/Board/Row7/Board Tile13/TextureRect/ItemSlot"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 3
+stretch_mode = 4
+
+[node name="Board Tile14" type="Panel" parent="Board Container/MarginContainer/Board/Row7"]
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="Board Container/MarginContainer/Board/Row7/Board Tile14"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -37.5
+offset_top = -37.5
+offset_right = 37.5
+offset_bottom = 37.5
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_0ocgh")
+expand_mode = 3
+
+[node name="ItemSlot" type="Panel" parent="Board Container/MarginContainer/Board/Row7/Board Tile14/TextureRect"]
+custom_minimum_size = Vector2(52, 52)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -25.0
+offset_top = -25.0
+offset_right = 25.0
+offset_bottom = 25.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("2_qg17u")
+
+[node name="TextureRect" type="TextureRect" parent="Board Container/MarginContainer/Board/Row7/Board Tile14/TextureRect/ItemSlot"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 3
+stretch_mode = 4
+
+[node name="Board Tile15" type="Panel" parent="Board Container/MarginContainer/Board/Row7"]
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="Board Container/MarginContainer/Board/Row7/Board Tile15"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -37.5
+offset_top = -37.5
+offset_right = 37.5
+offset_bottom = 37.5
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_0ocgh")
+expand_mode = 3
+
+[node name="ItemSlot" type="Panel" parent="Board Container/MarginContainer/Board/Row7/Board Tile15/TextureRect"]
+custom_minimum_size = Vector2(52, 52)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -25.0
+offset_top = -25.0
+offset_right = 25.0
+offset_bottom = 25.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("2_qg17u")
+
+[node name="TextureRect" type="TextureRect" parent="Board Container/MarginContainer/Board/Row7/Board Tile15/TextureRect/ItemSlot"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 3
+stretch_mode = 4
+
+[node name="Row8" type="GridContainer" parent="Board Container/MarginContainer/Board"]
+layout_mode = 2
+theme_override_constants/h_separation = 5
+theme_override_constants/v_separation = 5
+columns = 15
+
+[node name="Board Tile" type="Panel" parent="Board Container/MarginContainer/Board/Row8"]
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="Board Container/MarginContainer/Board/Row8/Board Tile"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -37.5
+offset_top = -37.5
+offset_right = 37.5
+offset_bottom = 37.5
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_0ocgh")
+expand_mode = 3
+
+[node name="ItemSlot" type="Panel" parent="Board Container/MarginContainer/Board/Row8/Board Tile/TextureRect"]
+custom_minimum_size = Vector2(52, 52)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -25.0
+offset_top = -25.0
+offset_right = 25.0
+offset_bottom = 25.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("2_qg17u")
+
+[node name="TextureRect" type="TextureRect" parent="Board Container/MarginContainer/Board/Row8/Board Tile/TextureRect/ItemSlot"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 3
+stretch_mode = 4
+
+[node name="Board Tile2" type="Panel" parent="Board Container/MarginContainer/Board/Row8"]
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="Board Container/MarginContainer/Board/Row8/Board Tile2"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -37.5
+offset_top = -37.5
+offset_right = 37.5
+offset_bottom = 37.5
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_0ocgh")
+expand_mode = 3
+
+[node name="ItemSlot" type="Panel" parent="Board Container/MarginContainer/Board/Row8/Board Tile2/TextureRect"]
+custom_minimum_size = Vector2(52, 52)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -25.0
+offset_top = -25.0
+offset_right = 25.0
+offset_bottom = 25.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("2_qg17u")
+
+[node name="TextureRect" type="TextureRect" parent="Board Container/MarginContainer/Board/Row8/Board Tile2/TextureRect/ItemSlot"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 3
+stretch_mode = 4
+
+[node name="Board Tile3" type="Panel" parent="Board Container/MarginContainer/Board/Row8"]
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="Board Container/MarginContainer/Board/Row8/Board Tile3"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -37.5
+offset_top = -37.5
+offset_right = 37.5
+offset_bottom = 37.5
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_0ocgh")
+expand_mode = 3
+
+[node name="ItemSlot" type="Panel" parent="Board Container/MarginContainer/Board/Row8/Board Tile3/TextureRect"]
+custom_minimum_size = Vector2(52, 52)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -25.0
+offset_top = -25.0
+offset_right = 25.0
+offset_bottom = 25.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("2_qg17u")
+
+[node name="TextureRect" type="TextureRect" parent="Board Container/MarginContainer/Board/Row8/Board Tile3/TextureRect/ItemSlot"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 3
+stretch_mode = 4
+
+[node name="Board Tile4" type="Panel" parent="Board Container/MarginContainer/Board/Row8"]
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="Board Container/MarginContainer/Board/Row8/Board Tile4"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -37.5
+offset_top = -37.5
+offset_right = 37.5
+offset_bottom = 37.5
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_0ocgh")
+expand_mode = 3
+
+[node name="ItemSlot" type="Panel" parent="Board Container/MarginContainer/Board/Row8/Board Tile4/TextureRect"]
+custom_minimum_size = Vector2(52, 52)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -25.0
+offset_top = -25.0
+offset_right = 25.0
+offset_bottom = 25.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("2_qg17u")
+
+[node name="TextureRect" type="TextureRect" parent="Board Container/MarginContainer/Board/Row8/Board Tile4/TextureRect/ItemSlot"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 3
+stretch_mode = 4
+
+[node name="Board Tile5" type="Panel" parent="Board Container/MarginContainer/Board/Row8"]
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="Board Container/MarginContainer/Board/Row8/Board Tile5"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -37.5
+offset_top = -37.5
+offset_right = 37.5
+offset_bottom = 37.5
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_0ocgh")
+expand_mode = 3
+
+[node name="ItemSlot" type="Panel" parent="Board Container/MarginContainer/Board/Row8/Board Tile5/TextureRect"]
+custom_minimum_size = Vector2(52, 52)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -25.0
+offset_top = -25.0
+offset_right = 25.0
+offset_bottom = 25.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("2_qg17u")
+
+[node name="TextureRect" type="TextureRect" parent="Board Container/MarginContainer/Board/Row8/Board Tile5/TextureRect/ItemSlot"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 3
+stretch_mode = 4
+
+[node name="Board Tile6" type="Panel" parent="Board Container/MarginContainer/Board/Row8"]
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="Board Container/MarginContainer/Board/Row8/Board Tile6"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -37.5
+offset_top = -37.5
+offset_right = 37.5
+offset_bottom = 37.5
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_0ocgh")
+expand_mode = 3
+
+[node name="ItemSlot" type="Panel" parent="Board Container/MarginContainer/Board/Row8/Board Tile6/TextureRect"]
+custom_minimum_size = Vector2(52, 52)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -25.0
+offset_top = -25.0
+offset_right = 25.0
+offset_bottom = 25.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("2_qg17u")
+
+[node name="TextureRect" type="TextureRect" parent="Board Container/MarginContainer/Board/Row8/Board Tile6/TextureRect/ItemSlot"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 3
+stretch_mode = 4
+
+[node name="Board Tile7" type="Panel" parent="Board Container/MarginContainer/Board/Row8"]
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="Board Container/MarginContainer/Board/Row8/Board Tile7"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -37.5
+offset_top = -37.5
+offset_right = 37.5
+offset_bottom = 37.5
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_0ocgh")
+expand_mode = 3
+
+[node name="ItemSlot" type="Panel" parent="Board Container/MarginContainer/Board/Row8/Board Tile7/TextureRect"]
+custom_minimum_size = Vector2(52, 52)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -25.0
+offset_top = -25.0
+offset_right = 25.0
+offset_bottom = 25.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("2_qg17u")
+
+[node name="TextureRect" type="TextureRect" parent="Board Container/MarginContainer/Board/Row8/Board Tile7/TextureRect/ItemSlot"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 3
+stretch_mode = 4
+
+[node name="Board Tile8" type="Panel" parent="Board Container/MarginContainer/Board/Row8"]
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="Board Container/MarginContainer/Board/Row8/Board Tile8"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -37.5
+offset_top = -37.5
+offset_right = 37.5
+offset_bottom = 37.5
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_0ocgh")
+expand_mode = 3
+
+[node name="ItemSlot" type="Panel" parent="Board Container/MarginContainer/Board/Row8/Board Tile8/TextureRect"]
+custom_minimum_size = Vector2(52, 52)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -25.0
+offset_top = -25.0
+offset_right = 25.0
+offset_bottom = 25.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("2_qg17u")
+
+[node name="TextureRect" type="TextureRect" parent="Board Container/MarginContainer/Board/Row8/Board Tile8/TextureRect/ItemSlot"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 3
+stretch_mode = 4
+
+[node name="Board Tile9" type="Panel" parent="Board Container/MarginContainer/Board/Row8"]
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="Board Container/MarginContainer/Board/Row8/Board Tile9"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -37.5
+offset_top = -37.5
+offset_right = 37.5
+offset_bottom = 37.5
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_0ocgh")
+expand_mode = 3
+
+[node name="ItemSlot" type="Panel" parent="Board Container/MarginContainer/Board/Row8/Board Tile9/TextureRect"]
+custom_minimum_size = Vector2(52, 52)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -25.0
+offset_top = -25.0
+offset_right = 25.0
+offset_bottom = 25.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("2_qg17u")
+
+[node name="TextureRect" type="TextureRect" parent="Board Container/MarginContainer/Board/Row8/Board Tile9/TextureRect/ItemSlot"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 3
+stretch_mode = 4
+
+[node name="Board Tile10" type="Panel" parent="Board Container/MarginContainer/Board/Row8"]
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="Board Container/MarginContainer/Board/Row8/Board Tile10"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -37.5
+offset_top = -37.5
+offset_right = 37.5
+offset_bottom = 37.5
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_0ocgh")
+expand_mode = 3
+
+[node name="ItemSlot" type="Panel" parent="Board Container/MarginContainer/Board/Row8/Board Tile10/TextureRect"]
+custom_minimum_size = Vector2(52, 52)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -25.0
+offset_top = -25.0
+offset_right = 25.0
+offset_bottom = 25.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("2_qg17u")
+
+[node name="TextureRect" type="TextureRect" parent="Board Container/MarginContainer/Board/Row8/Board Tile10/TextureRect/ItemSlot"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 3
+stretch_mode = 4
+
+[node name="Board Tile11" type="Panel" parent="Board Container/MarginContainer/Board/Row8"]
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="Board Container/MarginContainer/Board/Row8/Board Tile11"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -37.5
+offset_top = -37.5
+offset_right = 37.5
+offset_bottom = 37.5
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_0ocgh")
+expand_mode = 3
+
+[node name="ItemSlot" type="Panel" parent="Board Container/MarginContainer/Board/Row8/Board Tile11/TextureRect"]
+custom_minimum_size = Vector2(52, 52)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -25.0
+offset_top = -25.0
+offset_right = 25.0
+offset_bottom = 25.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("2_qg17u")
+
+[node name="TextureRect" type="TextureRect" parent="Board Container/MarginContainer/Board/Row8/Board Tile11/TextureRect/ItemSlot"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 3
+stretch_mode = 4
+
+[node name="Board Tile12" type="Panel" parent="Board Container/MarginContainer/Board/Row8"]
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="Board Container/MarginContainer/Board/Row8/Board Tile12"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -37.5
+offset_top = -37.5
+offset_right = 37.5
+offset_bottom = 37.5
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_0ocgh")
+expand_mode = 3
+
+[node name="ItemSlot" type="Panel" parent="Board Container/MarginContainer/Board/Row8/Board Tile12/TextureRect"]
+custom_minimum_size = Vector2(52, 52)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -25.0
+offset_top = -25.0
+offset_right = 25.0
+offset_bottom = 25.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("2_qg17u")
+
+[node name="TextureRect" type="TextureRect" parent="Board Container/MarginContainer/Board/Row8/Board Tile12/TextureRect/ItemSlot"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 3
+stretch_mode = 4
+
+[node name="Board Tile13" type="Panel" parent="Board Container/MarginContainer/Board/Row8"]
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="Board Container/MarginContainer/Board/Row8/Board Tile13"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -37.5
+offset_top = -37.5
+offset_right = 37.5
+offset_bottom = 37.5
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_0ocgh")
+expand_mode = 3
+
+[node name="ItemSlot" type="Panel" parent="Board Container/MarginContainer/Board/Row8/Board Tile13/TextureRect"]
+custom_minimum_size = Vector2(52, 52)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -25.0
+offset_top = -25.0
+offset_right = 25.0
+offset_bottom = 25.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("2_qg17u")
+
+[node name="TextureRect" type="TextureRect" parent="Board Container/MarginContainer/Board/Row8/Board Tile13/TextureRect/ItemSlot"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 3
+stretch_mode = 4
+
+[node name="Board Tile14" type="Panel" parent="Board Container/MarginContainer/Board/Row8"]
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="Board Container/MarginContainer/Board/Row8/Board Tile14"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -37.5
+offset_top = -37.5
+offset_right = 37.5
+offset_bottom = 37.5
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_0ocgh")
+expand_mode = 3
+
+[node name="ItemSlot" type="Panel" parent="Board Container/MarginContainer/Board/Row8/Board Tile14/TextureRect"]
+custom_minimum_size = Vector2(52, 52)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -25.0
+offset_top = -25.0
+offset_right = 25.0
+offset_bottom = 25.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("2_qg17u")
+
+[node name="TextureRect" type="TextureRect" parent="Board Container/MarginContainer/Board/Row8/Board Tile14/TextureRect/ItemSlot"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 3
+stretch_mode = 4
+
+[node name="Board Tile15" type="Panel" parent="Board Container/MarginContainer/Board/Row8"]
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="Board Container/MarginContainer/Board/Row8/Board Tile15"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -37.5
+offset_top = -37.5
+offset_right = 37.5
+offset_bottom = 37.5
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_0ocgh")
+expand_mode = 3
+
+[node name="ItemSlot" type="Panel" parent="Board Container/MarginContainer/Board/Row8/Board Tile15/TextureRect"]
+custom_minimum_size = Vector2(52, 52)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -25.0
+offset_top = -25.0
+offset_right = 25.0
+offset_bottom = 25.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("2_qg17u")
+
+[node name="TextureRect" type="TextureRect" parent="Board Container/MarginContainer/Board/Row8/Board Tile15/TextureRect/ItemSlot"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 3
+stretch_mode = 4
