@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://xhu4eu0q86cm"]
+[gd_scene load_steps=12 format=3 uid="uid://xhu4eu0q86cm"]
 
 [ext_resource type="Texture2D" uid="uid://dpsdpm7xum1bs" path="res://Wood Tile.png" id="1_0ocgh"]
 [ext_resource type="Texture2D" uid="uid://chlh61a3jqktb" path="res://triple word.png" id="1_6hixq"]
@@ -10,6 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://bu288g54ytfcj" path="res://Center Tile.png" id="8_47qxc"]
 [ext_resource type="Texture2D" uid="uid://pt5n78w8ute" path="res://letter_C.png" id="9_5ko4t"]
 [ext_resource type="Texture2D" uid="uid://bvx81a2eo0gum" path="res://letter_B.png" id="10_xkuoh"]
+[ext_resource type="PackedScene" uid="uid://yebyh6hle2y" path="res://tile_inventory.tscn" id="11_xkuoh"]
 
 [node name="Word Board" type="Node3D"]
 
@@ -10484,3 +10485,5 @@ grow_horizontal = 2
 grow_vertical = 2
 expand_mode = 3
 stretch_mode = 4
+
+[node name="TileInventory" parent="." instance=ExtResource("11_xkuoh")]
