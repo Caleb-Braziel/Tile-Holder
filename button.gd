@@ -23,8 +23,30 @@ var random_num := RandomNumberGenerator.new()
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass # Replace with function body.
+	random_num.random()
+	
+	item_slots = []
+	for child in grid.get_children():
+		if child is Panel:
+			item_slots.append(child)
+			
+func letter_bag_maker():
+	for i in range(27):
+		for j in range(letter_count[i]):
+			letter_bag.append(letters[i])		
 
+func random_letter():
+	
+	for slot in item_slots:
+		var icon: TextureRect = slot.get_node("TextureRect")
+		if letter_bag.size() == 0:
+			return
+		
+		if icon.texture == null:
+			var index = random_num.randi_range(0, letter_bag.size() - 1)
+			var path = 	"res://Letter Tiles/" + letter_bag[index]
+			icon.texture = load(path)
+			letter_bag.remove_at(index)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
